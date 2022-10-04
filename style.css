@@ -1,0 +1,106 @@
+:root{
+    /*Primary*/
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    /*Neutral*/
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --fuente:'Red Hat Display', sans-serif;
+    /*
+    Mobile: 375px
+      Desktop: 1440px
+    */
+}
+html {
+    box-sizing: border-box;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+     font-size: 16px;
+     font-family: var(--fuente);
+     background-color: var(--Paleblue);
+     background-image: url(./images/pattern-background-mobile.svg);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+h1{
+    font-weight: 700;
+    text-align: center;
+    margin: 1.1rem 0 ;
+    color: var(--Darkblue);
+}
+p{
+    text-align: center;
+    color: var(--Desaturatedblue);
+    padding: 0 2.2rem ;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 4.6rem auto;
+    max-width: 21.5rem;
+    height: 35.5rem;
+    border-radius: 1.3rem;
+    background-color: white;
+    overflow: hidden;
+}
+.contenido__superior img{
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0 ;
+   
+}
+.contenido__inferior__info{
+    margin:1.7rem 1.8rem;
+    background-color: var(--Verypaleblue);
+    
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    width: 282px;
+    align-items: center;
+}
+h2{
+    font-size: medium;
+    text-align: center;
+    color: var(--Darkblue);
+    font-weight: 900;
+}
+.contenido__inferior__boton{
+    display: block;
+    margin: auto;
+    width: 282px;
+    height: 50px;
+    border: none;
+    border-radius: .7rem;
+    background-color: var(--Brightblue);
+    color: white;
+    font-weight: 700;
+    font-size: medium;
+}
+.contenido__inferior__boton:hover{
+    cursor: pointer;
+
+}
+.contenido__inferior__cancel{
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 25px 76px;
+}
+.contenido__inferior__cancel a{
+   color: var(--Desaturatedblue);
+}
