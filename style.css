@@ -72,18 +72,6 @@ p{
     text-align: left;
     padding: 0 48px
 }
-.sedans{
-    background-color: var(--Brightorange);
-    
-}
-.suv{
-    background-color: var(--Darkcyan);
-    color: var(--White);
-}
-.luxury{
-    background-color: var(--Verydarkcyan);
-   ;  
-}
 .button{
     border: 2px solid var(--White);
     border-radius: 23px;
@@ -96,6 +84,9 @@ p{
     color: var(--Verylightgray);
 }
 
+.container__div--sedans{
+    background-color: var(--Brightorange);
+}
 .button--sedans{
     color: var(--Brightorange);
 }
@@ -104,12 +95,22 @@ p{
     color: var(--White);
 }
 
+.container__div--suv{
+    background-color: var(--Darkcyan);
+    color: var(--White);
+}
 .button--suv{
     color: var(--Darkcyan);
 }
 .button--suv:hover{
     background-color: var(--Darkcyan);
     color: var(--White);
+}
+
+
+.container__div--luxury{
+    background-color: var(--Verydarkcyan);
+    
 }
 .button--luxury{
     color: var(--Verydarkcyan);
@@ -118,6 +119,7 @@ p{
     background-color: var(--Verydarkcyan);
     color: var(--White);
 }
+
 @media(min-width:944px){
     .container{
         width: 930px;
