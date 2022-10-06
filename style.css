@@ -49,8 +49,7 @@ p{
     color: var(--Transparentwhite);
     line-height: 1.6rem;
     font-weight: 400;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
 }
 a{
     text-decoration: none;   
@@ -123,10 +122,10 @@ a{
 
 @media(min-width:944px){
     .container{
-        width: 58.125rem;
+        width: 57.125rem;
     }
     .container__article{
-        height: 31.25rem;
+        height: 30rem;
         display: flex;
     }
 }
