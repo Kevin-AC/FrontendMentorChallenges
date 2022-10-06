@@ -3,6 +3,9 @@
     --Darkcyan: hsl(184, 100%, 22%);
     --Verydarkcyan: hsl(179, 100%, 13%);
     --White:#ffffff;
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+    --Verylightgray : hsl(0, 0%, 95%);/*(background, headings, buttons)*/
+
 
     --Fuente1:'Big Shoulders Display', cursive;
     --Fuente2:'Lexend Deca', sans-serif;
@@ -20,7 +23,9 @@
     box-sizing: border-box;
 }
 body{
-    font-size: 15px
+    font-size: 15px;
+    font-family: var(--Fuente2);
+    background-color: var(--Verylightgray);
 
 }
 
@@ -32,12 +37,14 @@ h1{
     text-align: left;
     padding-top:31px;
     padding-bottom: 22px;
+    color: var(--Verylightgray);
 }
 img{
     padding-top:45px;
 }
 p{
-    font-family: var(--Fuente2);
+    
+    color: var(--Transparentwhite);
     line-height: 25px;
     font-weight: 400;
     padding-bottom: 24px;
@@ -47,8 +54,11 @@ p{
 .attribution a { color: hsl(228, 45%, 44%); }
 
 .container{
-    width: 321px;
+    width: 325px;
     margin: 86px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    
 }
 .container__div{
     width: 100%;
@@ -64,7 +74,7 @@ p{
 }
 .sedans{
     background-color: var(--Brightorange);
-    border-radius: 10px 10px 0 0;   
+    
 }
 .suv{
     background-color: var(--Darkcyan);
@@ -72,7 +82,7 @@ p{
 }
 .luxury{
     background-color: var(--Verydarkcyan);
-    border-radius:0 0 10px 10px ;  
+   ;  
 }
 .button{
     border: 2px solid var(--White);
@@ -80,10 +90,10 @@ p{
     width: 141px;
     height: 47px;
     text-align: center;
-    font-family: var(--Fuente2);
     font-weight:700;
     background-color: var(--White);
     cursor: pointer;
+    color: var(--Verylightgray);
 }
 
 .button--sedans{
@@ -108,8 +118,13 @@ p{
     background-color: var(--Verydarkcyan);
     color: var(--White);
 }
-@media(min-width:768px){
+@media(min-width:944px){
     .container{
-
+        width: 930px;
+        margin:90px auto;
+    }
+    .container__div{
+        height: 500px;
+        display: flex;
     }
 }
