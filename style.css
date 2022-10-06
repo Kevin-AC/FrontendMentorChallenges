@@ -53,7 +53,7 @@ p{
     margin-bottom: 1.5rem;
 }
 a{
-    text-decoration: none;
+    text-decoration: none;   
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -75,22 +75,24 @@ a{
     text-align: left;
     padding: 0 3rem
 }
-.bta{
-    padding: 0.82rem 1.5rem;
+.button{
+    width: 128px;
+    height: 43px;
     border-radius: 1.5rem;
     border: 0.125rem solid var(--White);
     text-align: center;
     font-weight:700;
     background-color: var(--White);
-    cursor: pointer;  
+    cursor: pointer; 
 }
-.bta-sedans{
+.button--sedans,.button--sedans a{
     color: var(--Brightorange);
 }
-.bta-sedans:hover{
+.button--sedans:hover{
     background-color: var(--Brightorange);
     color: var(--White);
 }
+
 .sedans-card {
     background-color: var(--Brightorange);
 }
@@ -98,10 +100,10 @@ a{
 .suv-card{
     background-color: var(--Darkcyan);
 }
-.bta-suv{
+.button--suv,.button--suv a{
     color: var(--Darkcyan);
 }
-.bta-suv:hover{
+.button--suv:hover{
     background-color: var(--Darkcyan);
     color: var(--White);
 }
@@ -111,10 +113,10 @@ a{
     background-color: var(--Verydarkcyan);
     
 }
-.bta-luxury{
+.button--luxury,.button--luxury a{
     color: var(--Verydarkcyan);
 }
-.bta-luxury:hover{
+.button--luxury:hover{
     background-color: var(--Verydarkcyan);
     color: var(--White);
 }
