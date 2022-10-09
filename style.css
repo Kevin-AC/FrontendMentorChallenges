@@ -47,11 +47,11 @@ p{
 .image__eye-img{   
     width: 100%;
     height: 100%;
-    background-image: url(./images/icon-view.svg);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .image__eye-img:hover{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./images/icon-view.svg);
     background-color:hsl(178, 100%, 50%, .3);
     cursor: pointer;
 }
