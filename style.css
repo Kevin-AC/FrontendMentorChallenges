@@ -1,0 +1,129 @@
+:root{
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --mainBG : hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line : hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --fuente:  'Outfit', sans-serif;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 18px;
+    font-family: var(--fuente);
+    background-color: var(--mainBG);
+    color: var(--White);
+    min-height: 100vh;
+    display: grid;
+    place-content: center ;
+}
+p{
+    color: var(--Softblue);
+}
+.container{
+    width: 345px;
+    height: 572px;
+    border-radius: 1rem;
+    padding: 1.5rem ;
+    margin-bottom: 0.625rem;
+    background-color: var(--cardBG); 
+}
+
+.img__hero{
+    width: 100%;
+    height: 290px;
+    border-radius: .6rem;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.eye-img{   
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.eye-img:hover{
+    background-color:hsl(178, 100%, 50%, .3);
+    cursor: pointer;
+}
+h1{
+    padding-bottom: 0.875rem;
+}
+h1:hover
+,span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.info__principal{
+    margin-top: 1.125rem;
+    line-height: 1.875rem;
+    
+}
+.info__principal p{
+    padding-bottom: 0.75rem;
+    font-weight: 300;
+    font-size: 1rem;
+   
+}
+
+.info__precio{
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+.info__precio-style{
+    display: flex;
+    gap: .5rem;
+}
+.eth{
+    color: var(--Cyan);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.Creador{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    font-size: 1rem;
+}
+.Creador img{
+    width: 40px;
+    border: 0.125rem solid var(--White);
+    border-radius: 2.5rem;
+}
+span{
+    color: var(--White);
+}
+@media(min-width:992px){
+    .container{
+        width: 354px;
+        height: 600px;
+    }
+    .img__hero{
+        width: 100%;
+        height: 300px;
+    }
+    .Creador{
+        padding: 20px 0;
+    }
+    .info__principal p{
+        font-size: 18px;
+    }
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
