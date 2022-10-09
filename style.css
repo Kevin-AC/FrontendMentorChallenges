@@ -35,7 +35,7 @@ p{
     background-color: var(--cardBG); 
 }
 
-.img__hero{
+.image{
     width: 100%;
     height: 290px;
     border-radius: .6rem;
@@ -44,14 +44,14 @@ p{
     background-repeat: no-repeat;
     overflow: hidden;
 }
-.eye-img{   
+.image__eye-img{   
     width: 100%;
     height: 100%;
     background-image: url(./images/icon-view.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
-.eye-img:hover{
+.image__eye-img:hover{
     background-color:hsl(178, 100%, 50%, .3);
     cursor: pointer;
 }
@@ -63,19 +63,19 @@ h1:hover
     color: var(--Cyan);
     cursor: pointer;
 }
-.info__principal{
+.infoPrincipal{
     margin-top: 1.125rem;
     line-height: 1.875rem;
     
 }
-.info__principal p{
+.infoPrincipal p{
     padding-bottom: 0.75rem;
     font-weight: 300;
     font-size: 1rem;
    
 }
 
-.info__precio{
+.infoPrecio{
     font-size: 1rem;
     display: flex;
     text-align: center;
@@ -83,7 +83,7 @@ h1:hover
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--line);
 }
-.info__precio-style{
+.infoPrecio__style{
     display: flex;
     gap: .5rem;
 }
@@ -112,14 +112,14 @@ span{
         width: 354px;
         height: 600px;
     }
-    .img__hero{
+    .image{
         width: 100%;
         height: 300px;
     }
     .Creador{
         padding: 20px 0;
     }
-    .info__principal p{
+    .infoPrincipal p{
         font-size: 18px;
     }
 
