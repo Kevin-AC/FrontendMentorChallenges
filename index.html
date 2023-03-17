@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Single Price Grid Component</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Profile card component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  
 </head>
-
 <body>
   <main class="container">
-    <div class="container__bubbles"></div>
-    <div class="container__photo">
-      <img src="./images/image-victor.jpg" alt="">
-    </div>
-    <div class="container__personal">
-      <span class="name">Victor Crest</span>
-      <span class="age">26</span>
-      <div class="city"> London</div>
-    </div>
-    <div class="container__stast">
-      <div class="container__stast-statistics">
-        <div class="quantity">80K</div>
-        <div class="units">Followers</div>
-      </div>
-      <div class="container__stast-statistics">
-        <div class="quantity">803K</div>
-        <div class="units">Likes</div>
-      </div>
-      <div class="container__stast-statistics">
-        <div class="quantity">1.4K</div>
-        <div class="units">Photos</div>
-      </div>
-    </div>
-  </main>
-
-
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Kevin Argumedo</a>.
+    <section class="head">
+      <h1>Join our community</h1>
+      <h2 class="head__days">30-day, hassle-free money back guarantee</h2> 
+      <p class="head__text"> Gain access to our full library of tutorials along with expert code reviews. 
+          Perfect for any developers who are serious about honing their skills.
+      </p>
+     
+    </section>
+    <section class="Monthly">
+      <h2>Monthly Subscription</h2>
+      <p class="Monthly__price">$29 <span>per month</span> </p>
+      <p class="Monthly__text">Full access for less than &dollar;1 a day</p>
+      <a href="#"> <button class="Monthly__btn">Sign Up</button></a>
+    </section>
+    <section class="WhyUs">
+      <h2> Why Us</h2>  
+      <ul>
+        <li>Tutorials by industry experts</li> 
+        <li>Peer &amp; expert code review</li> 
+        <li>Coding exercises</li> 
+        <li>Access to our GitHub repos</li> 
+        <li>Community forum</li> 
+        <li>Flashcard decks</li> 
+        <li>New videos every week</li> 
+      </ul>
+    </section>
+  </main>  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Kevin Argumedo</a>.
+    </p>
   </footer>
 </body>
-
 </html>
