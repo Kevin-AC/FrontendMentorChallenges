@@ -11,14 +11,15 @@ The designs were created to the following widths:
 
 ### Primary
 
-Very Dark Magenta: hsl(300, 43%, 22%)
-Soft Pink: hsl(333, 80%, 67%)
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
 
 ### Neutral
 
-Dark Grayish Magenta: hsl(303, 10%, 53%)
-Light Grayish Magenta: hsl(300, 24%, 96%)
-White: hsl(0, 0%, 100%)
+- White : hsl(0, 0%, 100%); /*(main heading, stats)*/
+- Slightlytransparentwhite : hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+- Slightlytransparentwhite2 : hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
 
 ## Typography
 
@@ -28,5 +29,8 @@ White: hsl(0, 0%, 100%)
 
 ### Font
 
-- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
-- Weights: 400, 500, 700
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
