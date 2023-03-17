@@ -1,69 +1,55 @@
-import data from './data.json' assert{type:'json'};
-//console.log(data)
+const firstName = document.querySelector('#firstNameInput')
+const lastName = document.querySelector('#lastNameInput')
+const emailInput = document.querySelector('#emailInput')
+const password = document.querySelector('#passwordInput')
+            //   almacenar mensaje de error
+const firstNameError = document.querySelector('#firstNameError')
+const lastNameError = document.querySelector('#lastNameError')
+const emailAddresError = document.querySelector('#emailAddresError')
+const passworError = document.querySelector('#passworError')
 
-let bgColors=[
-    'hsl(15,100%,70%)',
-    'hsl(195,74%,62%)',
-    'hsl(348,100%,68%)',
-    'hsl(145,58%,55%)',
-    'hsl(264,64%,52%)',
-    'hsl(43,84%,65%)',
-]
+const buton=document.querySelector('#submit')
 
-let dailyArray=data.map(item=>item.timeframes.daily);
-let weeklyArray=data.map(item=>item.timeframes.weekly);
-let monthlyArray=data.map(item=>item.timeframes.monthly);
-
-let dailyBtn= document.querySelector('#daily');
-let weekly = document.querySelector('#weekly')
-let monthly = document.querySelector('#monthly');
-
-let secondSection = document.querySelector('.section2');
-
-drawElements(dailyArray);
-
-dailyBtn.addEventListener('click',()=>{
-    drawElements(dailyArray);
-});
-weekly.addEventListener('click',()=>{
-    drawElements(weeklyArray);
-})
-monthly.addEventListener('click',()=>{
-    drawElements(monthlyArray);
+buton.addEventListener('click',(e)=>{
+    e.preventDefault()//evitamos que el formulario se resetee al dar enviar
+    validarVacio(firstName.value, firstName, firstNameError, 'First Name  cannot be empty')
+    //enviamos contenido del input(firstName.value)
+    //pasamos el input(firstName) para luego pintarlor de rojo en caso de error
+    //pasamos el div contenedor del error
+    validarVacio(lastName.value, lastName, lastNameError,'Last Name  cannot be empty')
+    validarEmail(emailInput.value,emailInput,emailAddresError)
+    validarVacio(password.value, password, passworError,'Password  cannot be empty')
+    
 })
 
-function drawElements(array){
+function validarEmail(valueInput, divInput,divError){
+    let regExp=/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/
+    //console.log(regExp.test(valueInput))
+    if(regExp.test(valueInput)){
+        ocultarError(divInput,divError)
+    }else{
+        verError(divInput,divError,'looks like this is not an email');
+    }
+}
 
-    secondSection.innerHTML='';
-    array.forEach( (element, index) =>{
-        let title=data[index].title;
-        let titleLowerCase = title.toLocaleLowerCase();
+function validarVacio(valueInput, divInput,divError,nameInput){
+    //pasamos el parametro divInput para el firsName
+    if(valueInput.length==0){
+        verError(divInput,divError,nameInput)
+    }else{  
+        ocultarError(divInput,divError)
+    }
+}
 
-        if(titleLowerCase == 'self care'){
-            titleLowerCase = 'self-care'
-        }
+function verError(divInput,divError,error){
+    divInput.style.border="1px solid red"
+    divError.innerHTML=`<img class="icon-error" src="./images/icon-error.svg">
+                         <p class="error-p">${error}</p>`;
 
-        secondSection.innerHTML +=`
-        <div class="card">
-        <div class="card__background" style ="background-color:${bgColors[index]} ;">
-          <img class="card__image" src="./images/icon-${titleLowerCase}.svg" alt="work-img">
-        </div>
-        <div class="card__details">
-            <div class="card__activity">
-              <p class="card__title">${title}</p> 
-              <img class="" src="./images/icon-ellipsis.svg" alt="three dots">
-            </div>
-            
-            <div class="card__time">
-              <p class="card__hour">${element.current}hrs <!-- daily --></p> 
-              <p class="card__previous">Previous - ${element.previous}hrs <!-- daily --></p> 
-                <!-- 32hrs  weekly
-                Previous - 36hrs weekly 
-                103hrs  monthly
-                Previous - 128hrs monthly -->
-            </div>
-          </div>
-      </div>
-      `
-    })
+
+}
+function ocultarError(divInput,divError){
+    divInput.style.border="1px solid hsl(246, 25%, 77%)"
+    divError.innerHTML=``//quitar el mensaje de error
+
 }
