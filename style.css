@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+    .size{
+        @apply bg-contain bg-no-repeat w-265 h-44  xl:w-400 xl:h-52
+    }
+    .inputs{
+        @apply h-11 pl-4 rounded-xl border border-Lightgrayishviolet outline-none placeholder:text-Darkgrayishviolet
+    }
+    .inputError{
+        @apply h-11 pl-4 rounded-xl border border-Red outline-none  
+    }
+    .errorTxt{
+        @apply text-Red text-xs lowercase mt-2
+    }
+    .borde{
+        @apply  border-Verydarkviolet
+    }
+    .hide{
+        @apply hidden
+    }
+@tailwind utilities;
