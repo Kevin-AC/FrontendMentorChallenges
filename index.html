@@ -5,52 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
   
-  <title>Interactive rating component</title>
-
- 
+  <title>Article preview component</title>
 </head>
 <body>
-  <main>
+  <main class="container">
     <section class="main-container">
-      <div class="main-container__start">
-        <img  src="./images/icon-star.svg" alt="start-icon">
-      </div>
-        <h1 class="main-container__title">
-          How did we do?
-        </h1>
-        <p class="main-container__text">
-          Please let us know how we did with your support request. All feedback is appreciated 
-          to help us improve our offering!
-        </p>
-      <div class="main-container__butons">
-        <button class="main-container__butons-style">1 </button>
-        <button class="main-container__butons-style">2 </button>
-        <button class="main-container__butons-style">3 </button>
-        <button class="main-container__butons-style">4 </button>
-        <button class="main-container__butons-style">5 </button>
-      </div>
-        <button class="main-container__submit">Submit</button>
+      <div class="main-container__img"></div>
+      <section>
+        <div class="main-container__info">
+          <h2 class="main-container__info--title">
+            Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home</h2>
+          <p class="main-container__info--text">
+            Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I’ve got some simple tips 
+            to help you make any room feel complete.</p>
+          </div>
+        </div>
+  
+        <div class="main-container__perfil">
+          <img class="main-container__perfil--img" src="./images/avatar-michelle.jpg" alt="avatar">
+          <div class="main-container__perfil--info">
+            <p class="main-container__perfil--name">Michelle Appleton</p>
+            <p class="main-container__perfil--date">28 Jun 2020</p>
+          </div>
+          <button class="button">
+            <img  src="./images/icon-share.svg">
+          </button>
+          <button class="buttonCloseOne">
+            <img src="./images/icon-share.svg" alt="">
+          </button>
+        </div>
+      </section>
     </section>
-    <section class="tanks-container">
-      <img class="tanks-container__img" src="./images/illustration-thank-you.svg" alt="thanks-img">
-      <div class="tanks-container__result">
-        <p class="tanks-container__result--text">You selected <span class="tanks-container__result--number">4</span> out of 5</p>
+
+    <div class="main-container__share">
+      <p class="main-container__share--text">Share</p>
+      <div class="main-container__share--icons">
+        <img src="./images/icon-facebook.svg">
+        <img src="./images/icon-twitter.svg" >
+        <img src="./images/icon-pinterest.svg">
       </div>
-      <h2 class="tanks-container__title">Thank you!</h2>
-      <p class="tanks-container__paragraph">We appreciate you taking the time to give a rating. If you ever need more support, 
-        don’t hesitate to get in touch!</p>
-    </section>
-    
+      <button class="buttonClose">
+        <img src="./images/icon-share.svg" alt="">
+      </button>
+      <div class="triangle"></div>
+    </div>
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Kevin Argumedo</a>.
   </footer>
-  <script src="./main.js" ></script>
+  <script src="./main.js"></script>
 </body>
 </html>
