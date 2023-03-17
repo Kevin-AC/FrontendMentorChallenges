@@ -5,73 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./Css/style.css">
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <title>Four card feature section</title>
 </head>
 <body>
   <main class="container">
-    <section class="container__top">  
-      <picture>
-        <source class="container__top__img" srcset="./images/illustration-woman-online-mobile.svg " media="(max-width:1044px)">
-        <img class="container__top__imgD" src="./images/illustration-woman-online-desktop.svg" alt="">
-      </picture>      
-        
-      <div class="container__top__imageShadow"></div>
-      <div class="container__top__box-img"></div>
-    </section>
-    <section class="container__info">
-      <h1 class="container__info__title" >FAQ</h1>
-      <details class="container__info__detail">
-        <summary class="container__info__detail__summary">How many team members can I invite?
-          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
-        </summary>
-        <p class="container__info__detail__par">You can invite up to 2 additional users on the Free plan. There is no limit on
-          team members for the Premium plan.</p>
-      </details>
-      <hr class="container__info__line">
+    <header class="container__header">
+      <h1>Reliable, efficient delivery</h1>
+      <h2>Powered by Technology</h2>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data points 
+        to ensure that your project is successful
+      </p>
+    </header>
 
-      <details class="container__info__detail">
-        <summary class="container__info__detail__summary">What is the maximum file upload size?
-          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
-        </summary>
-        <p class="container__info__detail__par">No more than 2GB. All files in your account must fit your allotted storage space.</p>
-      </details>
-      <hr class="container__info__line">
+    <section class="container__card">
 
-      <details class="container__info__detail">
-        <summary class="container__info__detail__summary">How do I reset my password?
-          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
-        </summary>
-        <p class="container__info__detail__par">Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.</p>
-        </details>
-      <hr class="container__info__line">
+      <div class="card card--supervisor">
+        <div class="cardLine"></div>
+        <div class="cardContend">
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+          <div class="card-Img">
+            <img src="./images/icon-supervisor.svg" alt="">
+          </div>
+        </div>
+      </div>
 
-      <details class="container__info__detail">
-        <summary class="container__info__detail__summary">Can I cancel my subscription?
-          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
-        </summary>
-        <p class="container__info__detail__par">Yes! Send us a message and we’ll process your request no questions asked.</p>
-      </details>
-      <hr class="container__info__line">
-
-      <details class="container__info__detail">
-        <summary class="container__info__detail__summary">Do you provide additional support?
-          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
-        </summary>
-        <p class="container__info__detail__par"> Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-      </details>
-      <hr class="container__info__line">
-        
+      <div class="container__twoCard">
+        <div class="card card--TeamBuilder">
+          <div class="cardLine"></div>
+          <div class="cardContend">
+            <h2>Team Builder</h2>
+            <p>Scans our talent network to create the optimal team for your project</p>
+            <div class="card-Img">
+              <img src="./images/icon-team-builder.svg" alt="">
+            </div>
+          </div>
+        </div>
+  
+        <div class="card card--Karma">
+          <div class="cardLine"></div>
+          <div class="cardContend">
+            <h2>Karma</h2>
+            <p>Regularly evaluates our talent to ensure quality</p>
+            <div class="card-Img">
+              <img src="./images/icon-karma.svg" alt="">
+            </div>
+          </div>
+        </div>
+  
+      </div>
       
+      <div class="card card--Calculator">
+        <div class="cardLine"></div>
+        <div class="cardContend">
+          <h2>Calculator</h2>
+         <p>Uses data from past projects to provide better delivery estimates</p>
+          <div class="card-Img">
+            <img src="./images/icon-calculator.svg" alt="">
+          </div>
+        </div>
+      </div>
+
     </section>
-  </main>
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Kevin Argumedo</a>.
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Kevin Argumedo</a>.
+    </p>
   </footer>
+</main>
 </body>
 </html>
