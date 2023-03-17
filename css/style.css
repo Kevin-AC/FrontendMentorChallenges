@@ -1,163 +1,143 @@
 :root{
---Red: hsl(0, 100%, 74%);
---redShadow:rgba(192, 92, 92, 0.548);
---Green: hsl(154, 59%, 51%);
---Blue: hsl(248, 32%, 49%);
---BlueShadow:rgba(97, 85, 172, 0.373);
---DarkBlue: hsl(249, 10%, 26%);
---GrayishBlue: hsl(246, 25%, 77%);
---fuenteP:'Poppins', sans-serif;
-
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 24%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --fuentep: 'Overpass', sans-serif;
 }
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
 body{
-    font-size: 16px;
-    font-family: var(--fuenteP);
-    min-height: 100vh;
+    font-family: var(--fuentep);
+    font-size: 15px;
+    background-color: var(--VeryDarkBlue);
+    color: var(--White);
+   
+}
+
+
+.main-container,.tanks-container{
+    margin: 120px auto;
+    width: 330px;
+    height: 365px;
+    background-color: var(--DarkBlue);
+    border-radius:16px;
+    padding:24px;
+}
+.main-container__start{
+    margin-bottom:20px;
+    background-color:var(--MediumGrey);
     display: grid;
     place-content: center;
-    background-color: var(--Red);
-    background-image: url(/images/bg-intro-mobile.png);
 }
-.main-container{
-    margin-top: 80px;
-    width: 375px;
-    padding: 24px;
-    color:white;
+.main-container__butons-style,.main-container__start{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
-.header-container__title{
-    font-size: 25px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 20px;  
-}
-.header-container__parafo{
-    text-align: center;
-    margin-bottom: 35px;
-    font-weight: 500;
-}
-.offer{
-    background-color: var(--Blue);
-    width: 100%;
-    height: 88px;
-    border-radius: 12px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    place-content: center;
-    margin-bottom: 20px;
-    box-shadow: 0px 6px 0px var(--BlueShadow);
-}
-.offer span{
-    font-weight: 700;
-}
-
-.form-container{
-    background-color:white;
-    color:var(--DarkBlue);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 0px var(--redShadow);
-}
-
-.error-container{
-   position: relative;
-}
-.icon-error{
-    position: absolute;
-    right: 15px;
-    top: -43px;
-}
-.error-p{
-    color: var(--Red);
-    font-size: 11px;
-    font-style: italic;
-    font-weight: 600;
-    text-align: right;
-    margin:  -10px 0 10px;
-}
-input{
-    width: 100%;
-    height: 55px;
-    border-radius: 8px;
+.main-container__title,.tanks-container__title{
+    font-size: 24px;
     margin-bottom: 15px;
-    padding-left: 15px;
-    font-weight: 600;
-    border: .5px solid var(--GrayishBlue);
-}
-.form-container__buton{
-    border-style: none;
-    background-color: var(--Green);
-    text-transform: uppercase;
-    color: white;
-    font-size: 16px;
     font-weight: 700;
-    box-shadow: 0px 4px 0px 0px rgb(55, 190, 132);
+}
+.main-container__text,.tanks-container__paragraph{
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+    color: var(--LightGrey);
+}
+.main-container__butons{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 1.2rem;
+}
+.main-container__butons-style{
+    border-style: none;
+    background-color:var(--MediumGrey);
+    color: var(--LightGrey);
+    font-weight: 700;
+}
+.main-container__butons-style:hover{
     cursor: pointer;
-    letter-spacing: 1px;
-    margin-bottom:0px;
-} 
-
-.terms{
-    color: var(--GrayishBlue);
-    padding: 10px 22px;
-    font-size: 11px;
-    font-weight: 600;
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
+.main-container__butons-style:focus{
+    color: var(--White);
+    background-color: var(--Orange);
+}
+.main-container__submit{
+    margin: 20px 0;
+    width: 100%;
+    height: 45px;
+    border-radius: 50px;
+    border-style: none;
+    background-color: var(--Orange);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.main-container__submit:hover{
+    cursor: pointer;
+    background-color: var(--White);
+    color: var(--Orange);
+}
+/**************************************/
+.tanks-container{
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.tanks-container__img{
+    width: 150px;
+    margin-bottom: 30px;
+}
+.tanks-container__result--text{
+    font-size: 13px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    background-color: var(--MediumGrey);
+    height: 35px;
+    width: 170px;
+    text-align: center;
+    padding: 9px 0;
+    color: var(--Orange);
+}
+.tanks-container__paragraph{
     text-align: center;
 }
-.terms a{
-    text-decoration: none;
-    color: var(--Red);
-    font-weight: 700;
+
+@media(min-width:600px){
+    .main-container,.tanks-container{
+        width: 412px;
+        height: 412px;
+        padding: 34px; 
+    }
+    .main-container__butons-style,.main-container__start{
+        width: 50px;
+        height: 50px;
+    }
+    .main-container__title,.tanks-container__title{
+        font-size:29px;
+    }
+    .main-container__text,.tanks-container__paragraph{
+        font-size: 16px;
+    }
+    .tanks-container__result--text{
+        font-size: 1em;
+        width: 196px;
+    }
 }
-/**************Desktop************************************/
-@media(min-width:1200px){
-    .main-container{
-        width: 100%;
-        display: flex;
-    }
-    .header-container__parafo,.header-container__title{
-        padding: 0 90px; 
-        text-align: left;
-    }
-    .header-container__title {
-        margin-top: 140px;
-        font-size: 45px;
-        text-align: left;
-    }
-    .offer{
-        width: 500px;
-        height: 60px;
-        text-align: center;
-    }
-    .form{
-        margin-right: 75px;
-    }
-    input{
-        padding-left: 30px;
-    }
-    .terms{
-        margin-top: 10px;
-    }
-
-}
-
-
-
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 12px;
     text-align: center; 
-    color: white;
-    font-weight: 500;
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
-    text-decoration: none;
-    font-weight: 700;
-}
+    color: hsl(228, 45%, 44%);
+ }
