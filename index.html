@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
-  <title>Huddle landing page </title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Profile card component</title>
 </head>
-<body>
-  <main>
-    <section id="seccion1">
-      <div id="logo-contaioner">
-        <img src="./images/logo.svg" alt="logo">
-      </div>
-      <div id="mockup-container">
-        <img id="mockup" src="./images/illustration-mockups.svg" alt="ilustracion">
-      </div>
 
-    </section>
-    <section id="seccion2">
-      <h1>Build The Community Your Fans Will Love</h1>
-      <p>Huddle re-imagines the way we build communities.You have a voice, but so does your audience. 
-        Create connections with your users as you engage in genuine discussion.
-      </p>
-      <div class="button">
-        <a href="#">Register</a>
-      </div>    
-      <div class="social-container">
-        <div class="redes">
-          <a class="fa-brands fa-facebook"></a>
-          <a class="fa-brands fa-twitter"></a>
-          <a class="fa-brands fa-instagram"></a>
-        </div>
+<body>
+  <main class="container">
+    <div class="container__bubbles"></div>
+    <div class="container__photo">
+      <img src="./images/image-victor.jpg" alt="">
+    </div>
+    <div class="container__personal">
+      <span class="name">Victor Crest</span>
+      <span class="age">26</span>
+      <div class="city"> London</div>
+    </div>
+    <div class="container__stast">
+      <div class="container__stast-statistics">
+        <div class="quantity">80K</div>
+        <div class="units">Followers</div>
       </div>
-    </section>
+      <div class="container__stast-statistics">
+        <div class="quantity">803K</div>
+        <div class="units">Likes</div>
+      </div>
+      <div class="container__stast-statistics">
+        <div class="quantity">1.4K</div>
+        <div class="units">Photos</div>
+      </div>
+    </div>
   </main>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Kevin Argumedo</a>.
-    </p>
+
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kevin Argumedo</a>.
   </footer>
-  <script src="https://kit.fontawesome.com/126e59feef.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
