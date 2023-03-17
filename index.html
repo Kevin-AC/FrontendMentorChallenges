@@ -5,49 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Css/style.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
 <body>
-  <main class="card">
-    <section class="card__primera">
-      <picture class="card__primera__img">
-        <source srcset="./images/image-product-desktop.jpg" media="(min-width:768px)">
-        <img src="./images/image-product-mobile.jpg" width="350">
-      </picture>
-      <!---
+  <main class="container">
+    <section class="container__top">  
+      <picture>
+        <source class="container__top__img" srcset="./images/illustration-woman-online-mobile.svg " media="(max-width:1044px)">
+        <img class="container__top__imgD" src="./images/illustration-woman-online-desktop.svg" alt="">
+      </picture>      
         
-       <img class="card__primera__img" src="./images/image-product-mobile.jpg" alt="imagenProducto">
-      -->
-     
+      <div class="container__top__imageShadow"></div>
+      <div class="container__top__box-img"></div>
     </section>
-    <section class="card__segunda">
-    
-        <p class="card__segunda__tipo-producto">Perfume</p>
-        <h2 class="card__Segunda__titulo">Gabrielle Essence Eau De Parfum</h2>
-        <p class="card__Segunda__descripcion">
-          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-          Perfumer-Creator for the House of CHANEL.
-        </p> 
-        <div class="card__Segunda__precios">
-          <p class="card__Segunda__oferta">$149.99</p>
-          <p class="card__Segunda__normal">$169.99</p>
-        </div>
-        <button class="card__Segunda__boton">
-          <img class="card__Segunda__boton__icon" src="./images/icon-cart.svg" alt="">
-          Add to Cart
-        </button>
-       
+    <section class="container__info">
+      <h1 class="container__info__title" >FAQ</h1>
+      <details class="container__info__detail">
+        <summary class="container__info__detail__summary">How many team members can I invite?
+          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
+        </summary>
+        <p class="container__info__detail__par">You can invite up to 2 additional users on the Free plan. There is no limit on
+          team members for the Premium plan.</p>
+      </details>
+      <hr class="container__info__line">
+
+      <details class="container__info__detail">
+        <summary class="container__info__detail__summary">What is the maximum file upload size?
+          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
+        </summary>
+        <p class="container__info__detail__par">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </details>
+      <hr class="container__info__line">
+
+      <details class="container__info__detail">
+        <summary class="container__info__detail__summary">How do I reset my password?
+          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
+        </summary>
+        <p class="container__info__detail__par">Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.</p>
+        </details>
+      <hr class="container__info__line">
+
+      <details class="container__info__detail">
+        <summary class="container__info__detail__summary">Can I cancel my subscription?
+          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
+        </summary>
+        <p class="container__info__detail__par">Yes! Send us a message and we’ll process your request no questions asked.</p>
+      </details>
+      <hr class="container__info__line">
+
+      <details class="container__info__detail">
+        <summary class="container__info__detail__summary">Do you provide additional support?
+          <img class="container__info__detail__icon" src="./images/icon-arrow-down.svg" alt="">
+        </summary>
+        <p class="container__info__detail__par"> Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      </details>
+      <hr class="container__info__line">
+        
       
     </section>
   </main>
-  
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Kevin Argumedo</a>.
