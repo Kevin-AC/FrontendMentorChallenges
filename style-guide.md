@@ -11,23 +11,25 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Lineargradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
-- Red(input errors): hsl(0, 100%, 66%)
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Lightgrayishviolet: hsl(270, 3%, 87%)
-- Darkgrayishviolet: hsl(279, 6%, 55%)
-- Verydarkviolet: hsl(278, 68%, 11%)
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 18px
+- Font size: 16px
 
 ### Font
 
-- Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
-- Weights: 500
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600

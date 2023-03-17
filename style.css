@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 @tailwind base;
+.input{
+    @apply w-full lg:w-400 h-14  text-DarkGrayishRed placeholder:text-DesaturatedRed  rounded-full pl-6 mt-10 border border-DesaturatedRed  outline-none
+}
+.errorBorde{
+    @apply  border-red-500
+}
+.hide{
+    @apply hidden
+}
+.buton{
+    @apply w-85 h-57 absolute top-10 left-64 lg:left-80 rounded-full grid place-content-center hover:bg-gradient-to-l from-Hgradien1 to-Hgradien2
+}
 @tailwind components;
-    .size{
-        @apply bg-contain bg-no-repeat w-265 h-44  xl:w-400 xl:h-52
-    }
-    .inputs{
-        @apply h-11 pl-4 rounded-xl border border-Lightgrayishviolet outline-none placeholder:text-Darkgrayishviolet
-    }
-    .inputError{
-        @apply h-11 pl-4 rounded-xl border border-Red outline-none  
-    }
-    .errorTxt{
-        @apply text-Red text-xs lowercase mt-2
-    }
-    .borde{
-        @apply  border-Verydarkviolet
-    }
-    .hide{
-        @apply hidden
-    }
 @tailwind utilities;

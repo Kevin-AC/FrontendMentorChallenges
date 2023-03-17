@@ -1,34 +1,50 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: ['./index.html',],
   theme: {
     extend: {
+      fontFamily:{
+        'JosefinSans':'Josefin Sans'
+      },
+      boxShadow:{
+        'sombra':'0 10px 15px hsl(0, 80%, 86%)'
+      },
+      colors:{
+        'DesaturatedRed':'hsl(0, 36%, 70%)',
+        'SoftRed':'hsl(0, 93%, 68%)',
+        'prueba':'#FECFCF',
+        'DarkGrayishRed':'hsl(0, 6%, 24%)',
+        'gradien1':' hsl(0, 80%, 86%)',
+        'gradien2':' hsl(0, 74%, 74%)',
+        'Hgradien1':'hsl(0, 0%, 100%)',
+        'Hgradien2':'hsl(0, 100%, 98%)'
+      },
+      backgroundColor: {
+        'SoftRed':'hsl(0, 93%, 68%)',
+      },
+      variants: {
+      backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+    },
       width:{
         '375':'375px',
         '400':'400px',
-        '135':'135px',
-        '265':'265px'
+        '610':'610px',
+        '85':'85px'
       },
-      fontFamily:{
-        'SpaceGrotesk':'Space Grotesk'
+      height:{
+        '57':'57px'
       },
-      colors:{
-        'White':'hsl(0, 0%, 100%)',
-        'Lightgrayishviolet':'hsl(270, 3%, 87%)',
-        'Darkgrayishviolet':'hsl(279, 6%, 55%)',
-        'Verydarkviolet':'hsl(278, 68%, 11%)',
-        'Lineargradient':'hsl(249, 99%, 64%)',
-        'LineargradientTO':'hsl(278, 94%, 30%)',
-        'Red':'hsl(0, 100%, 66%)',
+      maxHeight: {
+        '800': '800px',
       },
       backgroundImage:{
-        'bgmovile':"url(../images/bg-main-mobile.png)",
-        'bgDesktop':"url(../images/bg-main-desktop.png)",
-        'cardBlack':"url(../images/bg-card-back.png)",
-        'cardFront':"url(../images/bg-card-front.png)",
-        'cardLogo':"url(../images/card-logo.svg)"
+        'heroMobile':'url(/images/hero-mobile.jpg)',
+       
+        'backgroundD':'url(/images/bg-pattern-desktop.svg)'
+      },
+      content:{
+        'heroDeskt':'url(/images/hero-desktop.jpg)',
       }
-
 
     },
   },
