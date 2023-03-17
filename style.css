@@ -1,147 +1,256 @@
 :root{
-    
-    --Cyan: hsl(179, 62%, 43%);
-    --BrightYellow: hsl(71, 73%, 54%);
-    --LightGray: hsl(204, 43%, 93%);
-    --GrayishBlue: hsl(218, 22%, 67%);
-    --LightCyan:hsl(179, 47%, 53%);
-    --fuenteP: 'Karla', sans-serif;
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+    --font: 'League Spartan', sans-serif;
+
+
 }
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
 
+}
 body{
-    font-size: 16px;
+    font-size: 15px;
+    font-family: var(--font);
+    color: white;
     min-height: 100vh;
     display: grid;
-    place-content: center ;
-    font-family: var(--fuenteP);
-    background-color: hsl(234, 27%, 20%);
-   
+    place-content: center;
+    background-image: url(./images/bg-pattern-top-mobile.svg),url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
 }
 .container{
-    width: 338px;
-    height: 762px;
-    text-align: left;
-    border-radius:0.5rem;
-    overflow: hidden; 
-}
-.head,
-.Monthly,
-.WhyUs{
-    width: 100%;
-    padding: 1.2rem 1.3rem 0rem 1.3rem;
-}
-.head{
-    background-color:var(--LightGray);
-    height: 278px;
     
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
-h1{
-    color: var(--Cyan);
+.container__header{
+    margin-bottom: 30px;
+}
+.container__header h1{
+    color: var(--VeryDarkMagenta);
+    font-size: 30;
     font-weight: 700;
-    padding-bottom: 1.25rem;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 64px 30px 64px;
 }
-.head__days{
-    color: var(--BrightYellow);
-    font-weight: bold;
-    padding-bottom: 1.25rem;
+.container__header p{
+    color: var(--DarkGrayishMagenta);
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 500;
+    margin: 0 28px 0 28px;
 }
-.head__text{
-    color: var(--GrayishBlue);
-    line-height: 1.6875rem;
-    font-size: 15px;
-}
-.Monthly{
-    background-color: var(--Cyan);
-    height: 236px;
-    color: var(--LightGray);
+.container__stars{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.Monthly__price{
-    font-size: 2rem;
+.stars{
+    background-color: var(--LightGrayishMagenta);
+    border-radius: 8px;
+    margin: 8px 0;
+    width: 330px;
+    height: 80px;
+    padding: 15px;
     font-weight: 700;
-    padding-bottom: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: var(--VeryDarkMagenta);
 }
-span{
-    font-size: 1rem;
-    font-weight: 400;
+.stars .fivestars{
+    min-width: 110px;
 }
+.stars .text{
+    min-width: 240px;
+    text-align: center;
+}
+.container__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.card{
+    background-color: var(--VeryDarkMagenta);
+    border-radius: 10px;
+    max-width:330px ;
+    height: 270px;
+    padding: 37px;
+    margin: 16px 24px 0px 24px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
 
-.Monthly__btn{
-    margin-top: 1.375rem;
-    border: none;
-    background-color: var(--BrightYellow);
-    width: 100%;
-    height: 3rem;
-    border-radius: 0.3rem;
-    color: var(--LightGray);
+}
+.card img{
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 60px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+}
+.card .name{
     font-weight: 700;
+    grid-column: 2/3;
     
 }
-h2{
-    font-size: 1.125rem;
+.card .status{
+    grid-column: 2/3;
+    color: var(--SoftPink);
 }
-.Monthly h2{
-    
-    color: var(--LightGray);
-    padding-bottom: 1.25rem;
+.card p{
+    grid-column: 1/3;
+    font-weight: 500;
+    color: var(--White);
+    line-height: 20px;
+    margin-top: 20px;
 }
+@media(min-width:600px){
+    .container__stars{
+        padding: 0px 25px;
+    }
+    .stars-Reviews{
+        align-self: flex-start;
+    }
+    .stars-BestTech{
+        align-self: flex-end;
+    }
+    .container__card{
+        padding: 0px 25px;
+    }
+    .card-colton{
+        align-self: flex-start;
+    }
+    .card-anne{
+        align-self: flex-end;
 
-.WhyUs{
-    background-color:var(--LightCyan);
-    height:100%;
-    
-    color: var(--LightGray);
-}
-.WhyUs ul{
-    padding-top: 1.125rem;
-    list-style: none;
-    font-weight: 300;
-    line-height: 1.5rem;
-    font-size: 0.875rem;
-    
+    }
 }
 @media(min-width:768px){
-    .container{
-        width: 638px;
-        height: 474px;
+    body{
+        background-image: url(./images/bg-pattern-top-desktop.svg),url(./images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position:top left, bottom right;
+        background-size: 400px;
+    }
+    .stars{
+        flex-direction: row;
+        width: 444px;
+        height: 50px;
+        justify-content: center;
+    }
+    .container__card{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-    }
-    .head{
-        grid-column: 1/3;
-        padding: 20px 35px 35px 35px;
-        height: 216px;
-    }
-    .head h1{
-        font-size: 1.5rem;
-    }
-    .head__text{
-        font-size: 16px;
-        
-    }
-    .Monthly{
-        padding: 20px 40px 40px 40px;
-        height: 258px;
 
     }
-    .Monthly h2{
-        font-size: 1.1rem;
+    .card-colton{
+        grid-column: 1/2;
+        justify-self: center;
     }
-    .WhyUs{
-        height: 258px;
-        padding: 20px 40px 40px 40px;
+    .card-irene{
+        grid-column: 2/3;
+        justify-self: center;
     }
+    .card-anne{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        justify-self: center;
+    }
+}
+@media(min-width:894px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        row-gap: 25px;
+    }
+    .container__header{
+        grid-column: 1/6;
+    }
+    .container__stars{
+        grid-column:6/-1;
+    }
+    .container__card{
+        grid-column: 1/-1;
+    }
+    footer{
+        grid-column: 1/-1;
+    }
+}
+@media(min-width:1160px){
+    body{
+        background-size: 580px;
+    }
+    .container{
+        margin: 125px auto;
+        max-width: 1110px;
+    }
+    .container__card{
+       display: flex;
+       flex-direction: row;
+       padding: 0;
+       height: 320px;
+    }
+    .card{
+        margin: 0;
+    }
+    .container__header h1{
+        font-size: 35px;
+    }
+    .container__header p{
+        font-size: 18px;
+    }
+}
+@media(min-width:1440px){
+    .container__header{
+        width: 430px;
+        margin: 0;
+
+    }
+    .container__header h1{
+        font-size: 45px;
+        text-align: left;
+        margin: 0;
+        line-height: 45px;
+    }
+    .container__header p{
+        text-align: left;
+        margin: 15px 0 30px 0;
+        
+    }
+    .container__stars{
+        grid-column: 7/-1;
+        padding: 0;
+    }
+    
 }
 
 
 
 
 
-
-.attribution { color: white; font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--VeryDarkMagenta);
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
