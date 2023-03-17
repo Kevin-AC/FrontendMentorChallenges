@@ -3,31 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./dist/output.css">
-  <title>Base Apparel coming soon page</title>
+  <title>Ping coming soon page</title>
 </head>
-<body class=" bg-white font-JosefinSans grid place-content-center">
-  <main class="w-375 lg:w-full lg:h-screen lg:max-h-800 lg:grid lg:grid-cols-2 lg:bg-backgroundD relative ">
-    <div class="my-5 ml-8 lg:mt-10 lg:mx-28 lg:col-start-1 lg:row-start-1 "><img src="./images/logo.svg" alt="logo"></div>
-    <div class=" ">
-      <img class="lg:col-star-2 w-full h-64 bg-heroMobile bg-no-repeat bg-cover lg:absolute lg:right-0 lg:content-heroDeskt lg:w-610 lg:h-screen lg:max-h-800"></img>
-    </div>
+<body class="grid place-content-center min-h-screen ">
+  <main class="w-375 lg:w-auto lg:mx-52 mt-4 px-6 lg:px-36 text-xl">
+    <div class="grid place-content-center mb-10" ><img src="./images/logo.svg" alt="logo"></div>
+    <h1 class="text-3xl font-light text-center mb-6 text-Gray lg:text-4xl">We are launching <span class="font-bold text-black "> soon!</span></h1>
+    <p class="text-center text-VeryDarkBlue font-light mb-10" >Subscribe and get notified</p>
+    <div class="w-full lg:flex gap-4 relative">
+      <input id="input" class=" w-full text-VeryDarkBlue font-light h-16 rounded-full mb-4 pl-8 border borde outline-none" type="text" id="" placeholder="Your email address...">
+      <p id="diverror"><span id="errorText"></span></p>
+      <button id="buton" class="w-full lg:w-64 h-16 bg-Blue hover:opacity-70 rounded-full text-white" >Notify Me</button>
       
-    <section class="px-4 pt-10 lg:pt-44 lg:px-0 lg:pr-4 lg:mx-28 lg:col-start-1 lg:row-start-1 text-center lg:text-left">
-      <h1 class="font-bold text-4xl lg:text-7xl text-DarkGrayishRed px-5 lg:px-0 uppercase  tracking-widest mb-6 "><span class="text-DesaturatedRed font-light">We're</span><br>coming soon</h1>
-      <p class=" text-DesaturatedRed ">
-      Hello fellow shoppers! We're currently building our new fashion store. 
-      Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <div class=" px-3 lg:px-0 relative lg:pr-10 ">
-        <input id="emailInput" class="input " type="text" placeholder="Email Address">
-        <button id="btnSubmit" class="bg-gradient-to-l from-gradien1 to-gradien2 buton "><img src="./images/icon-arrow.svg" alt=""></button>
-        <img id="imgError" class="absolute top-14 left-56 lg:left-72 hide" src="./images/icon-error.svg" alt="icon-error">
-        <p class="text-SoftRed pl-7 mt-2" id="errorTxt" ></p> 
-      </div>      
-    </section>
+    </div>
+    <div class="my-16 ">
+      <img src="./images/illustration-dashboard.png" alt="illustration">
+    </div>
+    <div class="flex gap-4 justify-center">
+      <button class="social  bg-facebook bg-no-repeat bg-50% bg-center hover:bg-facebook-W "></button>
+      <button class="social  bg-twitter bg-no-repeat bg-50% bg-center hover:bg-twitter-W "></button>
+      <button class="social  bg-instagran bg-no-repeat bg-50% bg-center hover:bg-instagram-W "></button>
+      
+    </div>
+    <p class="text-Gray text-center my-10">&copy; Copyright Ping. All rights reserved.</p>
   </main>
- <script src="./main.js"></script>
+  <footer class="grid place-content-center ">
+    <p class="text-center text-VeryDarkBlue">
+      Challenge by <a class="font-semibold" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </a>.<br>
+      Coded by <a class="font-semibold" href="#">Kevin Argumedo</a>.
+    </p>
+  </footer>
+  <script src="./main.js"></script>
 </body>
+
 </html>

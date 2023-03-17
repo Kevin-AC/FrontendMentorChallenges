@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
 @tailwind base;
-.input{
-    @apply w-full lg:w-400 h-14  text-DarkGrayishRed placeholder:text-DesaturatedRed  rounded-full pl-6 mt-10 border border-DesaturatedRed  outline-none
-}
-.errorBorde{
-    @apply  border-red-500
-}
-.hide{
-    @apply hidden
-}
-.buton{
-    @apply w-85 h-57 absolute top-10 left-64 lg:left-80 rounded-full grid place-content-center hover:bg-gradient-to-l from-Hgradien1 to-Hgradien2
-}
 @tailwind components;
+.social{
+    @apply  w-10 h-10 hover:bg-Blue rounded-full border border-Gray;
+    }
+.error{
+    @apply  border-PaleRed ;
+}
+.borde{
+    @apply border-Blue lg:border-Gray
+}
+.errortext{
+    @apply text-LightRed text-xs pl-16 mb-7 lg:absolute lg:top-16 lg:left-8 lg:pl-0 lg:pt-4;
+}
 @tailwind utilities;

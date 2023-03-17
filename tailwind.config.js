@@ -1,49 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html',],
+  content: ['./index.html'],
   theme: {
     extend: {
       fontFamily:{
-        'JosefinSans':'Josefin Sans'
-      },
-      boxShadow:{
-        'sombra':'0 10px 15px hsl(0, 80%, 86%)'
+        'Libre Franklin':'Libre Franklin'
       },
       colors:{
-        'DesaturatedRed':'hsl(0, 36%, 70%)',
-        'SoftRed':'hsl(0, 93%, 68%)',
-        'prueba':'#FECFCF',
-        'DarkGrayishRed':'hsl(0, 6%, 24%)',
-        'gradien1':' hsl(0, 80%, 86%)',
-        'gradien2':' hsl(0, 74%, 74%)',
-        'Hgradien1':'hsl(0, 0%, 100%)',
-        'Hgradien2':'hsl(0, 100%, 98%)'
+        'Blue':'hsl(223, 87%, 63%)',
+        'PaleRed':'hsl(354, 100%, 66%)',
+        'Gray':'hsl(0, 0%, 59%)',
+        'VeryDarkBlue':'hsl(209, 33%, 12%)',
+        'LightRed':'hsl(354, 100%, 66%)',
       },
-      backgroundColor: {
-        'SoftRed':'hsl(0, 93%, 68%)',
-      },
-      variants: {
-      backgroundColor: ['responsive', 'hover', 'focus', 'active'],
-    },
       width:{
-        '375':'375px',
-        '400':'400px',
-        '610':'610px',
-        '85':'85px'
-      },
-      height:{
-        '57':'57px'
-      },
-      maxHeight: {
-        '800': '800px',
+        '375':'375px'
       },
       backgroundImage:{
-        'heroMobile':'url(/images/hero-mobile.jpg)',
-       
-        'backgroundD':'url(/images/bg-pattern-desktop.svg)'
+        'facebook-W':"url('../images/facebook-white.svg')",
+        'facebook':"url('../images/facebook.svg')",
+        'twitter':"url('../images/twitter.svg')",
+        'twitter-W':"url('../images/twitter-white.svg')",
+        'instagran':"url('../images/instagram.svg')",
+        'instagram-W':"url('../images/instagram-white.svg.svg')",
       },
-      content:{
-        'heroDeskt':'url(/images/hero-desktop.jpg)',
+      backgroundSize:{
+        '50%':'50%'
       }
 
     },
