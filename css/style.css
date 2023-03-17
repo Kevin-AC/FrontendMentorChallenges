@@ -1,0 +1,200 @@
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Lightorange/*(work)*/: hsl(15, 100%, 70%);
+    --Softblue/*(play)*/: hsl(195, 74%, 62%);
+    --Lightred/*(study)*/: hsl(348, 100%, 68%);
+    --Limegreen/*(exercise)*/: hsl(145, 58%, 55%);
+    --Violet/*(social)*/: hsl(264, 64%, 52%);
+    --Softorange/*(self care)*/: hsl(43, 84%, 65%);
+    /*Neutral*/
+    --Verydarkblue: hsl(226, 43%, 10%);
+    --Darkblue: hsl(235, 46%, 20%);
+    --Desaturatedblue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+    --white:rgb(255,255,255);
+    --fuenteP:'Rubik', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: var(--fuenteP);
+    background-color: var(--Verydarkblue);
+    color:var(--white); 
+}
+.main-container{
+    margin: 120px auto;
+    width: 328px;    
+}
+.section1{
+    position: relative; 
+}
+
+.main-card__info{
+    background-color: var(--Blue);
+    position: absolute;
+    width: 100%;
+    z-index: 1;/*posicionar encima */
+    border-radius: 16px;
+    padding:30px;
+    display: flex;
+}
+.main-card__img{
+    width: 80px;
+    margin-right: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.main-card__title{
+    font-weight: 500;
+    font-size: 14px;
+    margin:12px 0 4px ;
+    color: var(--PaleBlue);
+}
+.main-card__name{
+    font-weight: 300;
+    font-size: 22px;
+}
+.main-card__dates{
+    background-color: var(--Darkblue);
+    /*posicionar detras de main-card__info*/
+    position: absolute;
+    top: 100px;
+    /*++++++++++++++++*/
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    padding-top: 30px;
+    border-radius: 16px;
+    color: var(--PaleBlue);
+}
+.main-card__frequency{
+    padding-top: 30px;
+}
+.main-card__frequency:hover{
+    cursor: pointer;
+    color: var(--white);
+}
+.section2{
+    padding-top: 220px;   
+}
+.card{
+    position:relative ;
+    margin-bottom: 105px;
+}
+.card__background{
+    background-color: var(--Lightorange);
+    height: 80px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.card__image{
+   margin-top: -10px;
+   padding-left: 230px;
+}
+.card__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:25px;
+    background-color: var(--Darkblue);
+    border-radius: 16px;
+    height: 120px;
+    position:absolute;
+    width: 100%;
+    bottom:-85px;
+}
+.card__details:hover{
+    cursor: pointer;
+    background-color: var(--Desaturatedblue);
+}
+.card__activity,.card__time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card__title{
+    font-weight: 500;
+}
+.card__hour{
+    font-size: 35px;
+    font-weight: 300;
+}
+.card__previous{
+    font-size: 14px;
+    color: var(--PaleBlue);
+}
+
+
+@media(min-width:1200px){
+    .main-container{
+        width: 1150px;
+        display: flex;
+       
+    }
+    .section1{
+        width: 280px;
+        height: 564px;
+    
+    }
+    .main-card__info{
+        height: 360px;
+        flex-direction: column;
+    }
+    .main-card__img{
+        margin-bottom: 30px;
+    }
+    .main-card__name{
+        font-size: 40px;
+    }
+    .main-card__dates{
+        margin-top: 230px;
+        height: 215px;
+        flex-direction: column;
+        padding: 40px 32px 60px;
+    }
+    .section2{
+        padding: 0 30px;
+        width: 860px;
+        height: 564px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .card{
+        width: 240px;
+        height: 250px;
+        margin-bottom: 40px;
+    }
+    .card__image{
+        padding-left: 140px;
+    }
+    .card__details{
+        height: 200px;
+        bottom: -5px;
+    }
+    .card__time{
+        height: 300px;
+        flex-direction:column;
+        align-items: flex-start;
+        padding:30px 0 ;
+    }
+    .card__hour{
+        font-size: 50px;
+    }
+}
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center; 
+    margin-bottom: 20px;   
+}
+.attribution a {
+    list-style: none;
+    color: hsl(228, 45%, 44%); 
+}

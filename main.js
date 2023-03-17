@@ -1,94 +1,69 @@
+import data from './data.json' assert{type:'json'};
+//console.log(data)
 
-const bill = document.getElementById('Bill');
-let billValue=bill.value
+let bgColors=[
+    'hsl(15,100%,70%)',
+    'hsl(195,74%,62%)',
+    'hsl(348,100%,68%)',
+    'hsl(145,58%,55%)',
+    'hsl(264,64%,52%)',
+    'hsl(43,84%,65%)',
+]
 
-const people=document.getElementById('People')
-let peopleValue=people.value
-const peopleSpam=document.getElementById('errorTx')
+let dailyArray=data.map(item=>item.timeframes.daily);
+let weeklyArray=data.map(item=>item.timeframes.weekly);
+let monthlyArray=data.map(item=>item.timeframes.monthly);
 
-//const botones=document.getElementById('botones')
-const botones=document.querySelectorAll('.butons')
-const btn5 = document.getElementById('btn5')
-const btn10 = document.getElementById('btn10')
-const btn15 = document.getElementById('btn15')
-const btn25 = document.getElementById('btn25')
-const btn50=document.getElementById('btn50')
-const custom=document.getElementById('Custom')
-let customValue=custom.value
-const reset=document.getElementById('Reset')
+let dailyBtn= document.querySelector('#daily');
+let weekly = document.querySelector('#weekly')
+let monthly = document.querySelector('#monthly');
 
-const tipamount=document.getElementById('tipAmount')
-const total=document.getElementById('Total')
+let secondSection = document.querySelector('.section2');
 
-let valorTip=0
+drawElements(dailyArray);
 
-botones.forEach(element=>{
-    element.addEventListener('click',e=>{
-        restablecer()
-        custom.value=``
-        element.classList.add('butonsActive')
-        valorTip=parseInt(e.target.innerText.slice(0,-1))
-        calcularTip()
-    })
+dailyBtn.addEventListener('click',()=>{
+    drawElements(dailyArray);
+});
+weekly.addEventListener('click',()=>{
+    drawElements(weeklyArray);
+})
+monthly.addEventListener('click',()=>{
+    drawElements(monthlyArray);
 })
 
-bill.addEventListener('input',()=>{
-    billValue=bill.value
-    calcularTip()
+function drawElements(array){
 
-   
-})
-people.addEventListener('input',()=>{
-    peopleValue=people.value
-    console.log(peopleValue)
-    if(peopleValue==0){
-        people.classList.add('error')
-        peopleSpam.innerText=`Can't be zero`
-    }else{
-        people.classList.remove('error')
-        peopleSpam.innerText=`` 
-        calcularTip()
-    }
-    
-   
-})
-custom.addEventListener('input',()=>{
-    valorTip=parseInt(custom.value)
-    if(isNaN(valorTip)){
+    secondSection.innerHTML='';
+    array.forEach( (element, index) =>{
+        let title=data[index].title;
+        let titleLowerCase = title.toLocaleLowerCase();
 
-    }else{
-        calcularTip()
-        restablecer()
-    }
+        if(titleLowerCase == 'self care'){
+            titleLowerCase = 'self-care'
+        }
 
-    
-})
-
-reset.addEventListener('click',e=>{
-    people.classList.remove('error')
-    peopleSpam.innerText=`` 
-    bill.value=``
-    people.value=``
-    custom.value=``
-    tipamount.innerText=`$0.00`
-    total.innerText=`$0.00`
-    restablecer()
-})
-
-function calcularTip(){
-    let calculotip = ((billValue * valorTip / 100) / people.value)
-    let totalP = ((billValue / people.value) + calculotip)
-    if(peopleValue!==''){
-        tipamount.innerText = (calculotip).toFixed(2)
-        total.innerText = (totalP).toFixed(2)
-    }
-    
-    
-    
-}
-function restablecer(){
-    
-    botones.forEach(element=>{
-        element.classList.remove('butonsActive')
+        secondSection.innerHTML +=`
+        <div class="card">
+        <div class="card__background" style ="background-color:${bgColors[index]} ;">
+          <img class="card__image" src="./images/icon-${titleLowerCase}.svg" alt="work-img">
+        </div>
+        <div class="card__details">
+            <div class="card__activity">
+              <p class="card__title">${title}</p> 
+              <img class="" src="./images/icon-ellipsis.svg" alt="three dots">
+            </div>
+            
+            <div class="card__time">
+              <p class="card__hour">${element.current}hrs <!-- daily --></p> 
+              <p class="card__previous">Previous - ${element.previous}hrs <!-- daily --></p> 
+                <!-- 32hrs  weekly
+                Previous - 36hrs weekly 
+                103hrs  monthly
+                Previous - 128hrs monthly -->
+            </div>
+          </div>
+      </div>
+      `
     })
 }

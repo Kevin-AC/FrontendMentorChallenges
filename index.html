@@ -5,68 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./dist/output.css">
- 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
   
-  <title>Tip calculator app</title>
+  <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
-<body class="bg-Lightgrayishcyan grid place-content-center min-h-screen text-2xl font-SpaceMono">
-  <h1 class="text-2xl text-center uppercase text-Verydarkcyan tracking-widest" >spli <br> tter</h1>
-  <main class="w-375 bg-white rounded-2xl p-8 mt-4 lg:w-full lg:flex">
-    <section class="mb-7 lg:mb-2 lg:w-auto lg:pr-4">
-      <div class="mb-7 relative">
-        <p class="parrafo">Bill</p>
-        <input id="Bill" class="input " type="text" value="" placeholder="0" >
-        <img class="absolute top-12 left-5" src="./images/icon-dollar.svg" alt="dollar">
-      </div>
+<body>
+  <main class="main-container">
+    <section class="section1">
+      <div class="main-card">
+        <div class="main-card__info">
+          <img class="main-card__img" src="./images/image-jeremy.png" alt="profile-img">
 
-      <div>
-        <p class="parrafo mb-4">Select Tip %</p>
-        <div id="botones" class="grid grid-cols-2 gap-4 mb-7 lg:grid-cols-3 ">
-          <button id="btn5"  class="butons  ">5%</button>
-          <button id="btn10" class="butons  ">10%</button>
-          <button id="btn15" class="butons  ">15%</button>
-          <button id="btn25" class="butons  ">25%</button>
-          <button id="btn50" class="butons  ">50%</button>
-          <input  id="Custom" class="input lg:w-28 pl-0 placeholder:text-Darkgrayishcyan" type="text" placeholder="Custom">
+          <div class="main-card-text">
+            <p class="main-card__title">Report for</p> 
+            <p class="main-card__name">Jeremy Robson</p>
+          </div>
         </div>
-      </div>
 
-      <div  class="relative">
-        <p class="parrafo">Number of People <span id="errorTx" class="text-red-500 pl-4 lg:pl-16"></span></p>
-        <input id="People" class="input "type="text" placeholder="0" >
-        <img class="absolute top-12 left-5 " src="./images/icon-person.svg" alt="person">
+        <div class="main-card__dates">
+          <p id="daily" class="main-card__frequency">Daily</p> 
+          <p id="weekly" class="main-card__frequency main-card__frequency-active">Weekly</p> 
+          <p id="monthly" class="main-card__frequency">Monthly</p> 
+        </div>
       </div>
     </section>
 
-
-    <section class="p-4 lg:px-8 bg-Verydarkcyan rounded-2xl lg:w-375">
-      <div class="flex justify-between my-7 ">
-        <div>
-          <p class="text-base text-white">Tip Amount</p>
-          <p class="text-sm text-Darkgrayishcyan">/ person</p>
+    <section class="section2"> 
+      <!-- <div class="card">
+        <div class="card__background">
+          <img class="card__image" src="./images/icon-work.svg" alt="work-img">
         </div>
-        <p  id="tipAmount" class="text-3xl text-Strongcyan">$0.00</p>
-      </div>
-
-      <div class="flex justify-between mb-7 lg:mb-32">
-        <div>
-          <p class="text-base text-white">Total</p>
-          <p class="text-sm  text-Darkgrayishcyan">/ person</p>
-        </div>
-        <p id="Total" class="text-3xl text-Strongcyan">$0.00</p>
-      </div>
-
-      <button id="Reset" class="bg-Strongcyan w-full h-11 rounded-md text-Verydarkcyan uppercase mb-5 lg:mb-0" >Reset</button>
+        <div class="card__details">
+            <div class="card__activity">
+              <p class="card__title">${data[index].title}</p> 
+              <img class="" src="./images/icon-ellipsis.svg" alt="three dots">
+            </div>
+            
+            <div class="card__time">
+              <p class="card__hour">${element.current}hrs </p> 
+              <p class="card__previous">Previous - ${element.previous}hrs </p> 
+               
+            </div>
+          </div>
+      </div> -->
     </section>
   </main>
-  <footer class="text-sm text-center ">
-    <p>
-      Challenge by <a class="text-Verydarkcyan font-bold" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> <br> 
-      Coded by <a class="text-Verydarkcyan font-bold" href="https://www.frontendmentor.io/profile/Kevin-AC">Kevin argumedo</a>
-    </p>
-    
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kevin Argumedo</a>.
   </footer>
-  <script src="main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
