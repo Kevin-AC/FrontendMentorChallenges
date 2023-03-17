@@ -5,62 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  
-  <title>Article preview component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-  <main class="container">
-    <section class="main-container">
-      <div class="main-container__img"></div>
-      <section>
-        <div class="main-container__info">
-          <h2 class="main-container__info--title">
-            Shift the overall look and feel by adding these wonderful 
-            touches to furniture in your home</h2>
-          <p class="main-container__info--text">
-            Ever been in a room and felt like something was missing? Perhaps 
-            it felt slightly bare and uninviting. I’ve got some simple tips 
-            to help you make any room feel complete.</p>
-          </div>
-        </div>
-  
-        <div class="main-container__perfil">
-          <img class="main-container__perfil--img" src="./images/avatar-michelle.jpg" alt="avatar">
-          <div class="main-container__perfil--info">
-            <p class="main-container__perfil--name">Michelle Appleton</p>
-            <p class="main-container__perfil--date">28 Jun 2020</p>
-          </div>
-          <button class="button">
-            <img  src="./images/icon-share.svg">
-          </button>
-          <button class="buttonCloseOne">
-            <img src="./images/icon-share.svg" alt="">
-          </button>
-        </div>
-      </section>
+  <main class="card">
+    <section class="card__primera">
+      <picture class="card__primera__img">
+        <source srcset="./images/image-product-desktop.jpg" media="(min-width:768px)">
+        <img src="./images/image-product-mobile.jpg" width="350">
+      </picture>
+      <!---
+        
+       <img class="card__primera__img" src="./images/image-product-mobile.jpg" alt="imagenProducto">
+      -->
+     
     </section>
-
-    <div class="main-container__share">
-      <p class="main-container__share--text">Share</p>
-      <div class="main-container__share--icons">
-        <img src="./images/icon-facebook.svg">
-        <img src="./images/icon-twitter.svg" >
-        <img src="./images/icon-pinterest.svg">
-      </div>
-      <button class="buttonClose">
-        <img src="./images/icon-share.svg" alt="">
-      </button>
-      <div class="triangle"></div>
-    </div>
+    <section class="card__segunda">
+    
+        <p class="card__segunda__tipo-producto">Perfume</p>
+        <h2 class="card__Segunda__titulo">Gabrielle Essence Eau De Parfum</h2>
+        <p class="card__Segunda__descripcion">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p> 
+        <div class="card__Segunda__precios">
+          <p class="card__Segunda__oferta">$149.99</p>
+          <p class="card__Segunda__normal">$169.99</p>
+        </div>
+        <button class="card__Segunda__boton">
+          <img class="card__Segunda__boton__icon" src="./images/icon-cart.svg" alt="">
+          Add to Cart
+        </button>
+       
+      
+    </section>
   </main>
+  
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Kevin Argumedo</a>.
   </footer>
-  <script src="./main.js"></script>
 </body>
 </html>

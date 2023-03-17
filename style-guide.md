@@ -9,26 +9,27 @@ The designs were created to the following widths:
 
 ## Colors
 
---VeryDarkGrayishBlue: hsl(217, 19%, 35%);
---DesaturatedDarkBlue: hsl(214, 17%, 51%);
---GrayishBlue: hsl(212, 23%, 69%);
---LightGrayishBlue: hsl(210, 46%, 95%);
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 13px
+- Font size (paragraph): 14px
 
-### Headings
+### Font
 
-- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
 - Weights: 500, 700
 
-## Icons
-
-We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
