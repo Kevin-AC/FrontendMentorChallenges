@@ -13,7 +13,9 @@ function OverviewCard({ Image, ViewsLikes, nViews, Percent, Icon }) {
           <img src={ImageIcon} alt="PercentIcon" />
           {/* <p className="text-white">{Percent}</p> */}
           <p
-            className={`${Icon == "down" ? "text-BrightRed" : "text-LimeGreen" }`}
+            className={`${
+              Icon == "down" ? "text-BrightRed" : "text-LimeGreen"
+            }`}
           >
             {Percent}
           </p>
