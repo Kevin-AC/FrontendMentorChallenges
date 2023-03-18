@@ -4,7 +4,7 @@ function Card({ Social, FollowersN, Subscribers, Today, image, icon }) {
   return (
     <div className="w-326 h-218 rounded-md bg-DarkDesaturatedBlue(CardBG) border-t-4 border-Facebook flex flex-col items-center justify-center gap-4 ">
       <div className="flex gap-2">
-        <img src={image} alt="icon" />
+        <img src={imageSrc} alt="icon" />
         <p className=" text-DesaturatedBlue(Text) font-bold">{Social}</p>
       </div>
       <p className="text-6xl font-bold text-White(Text)">{FollowersN}</p>

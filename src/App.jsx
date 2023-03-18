@@ -16,7 +16,7 @@ function App() {
           FollowersN="1987"
           Subscribers="FOLLOWERS"
           Today="12"
-          image="src/images/icon-facebook.svg"
+          image="facebook"
           icon="up"
         />
         <Card
@@ -24,7 +24,7 @@ function App() {
           FollowersN="1044"
           Subscribers="FOLLOWERS"
           Today="99"
-          image="src/images/icon-twitter.svg"
+          image="twitter"
           icon="up"
         />
         <Card
