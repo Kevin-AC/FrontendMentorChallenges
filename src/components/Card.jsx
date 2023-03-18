@@ -1,6 +1,6 @@
 function Card({ Social, FollowersN, Subscribers, Today, image, icon }) {
-  const imageSrc = `src/images/icon-${image}.svg`;
-  const iconImage = `src/images/icon-${icon}.svg`;
+  const imageSrc = `./src/images/icon-${image}.svg`;
+  const iconImage = `./src/images/icon-${icon}.svg`;
   return (
     <div className="w-326 h-218 rounded-md bg-DarkDesaturatedBlue(CardBG) border-t-4 border-Facebook flex flex-col items-center justify-center gap-4 ">
       <div className="flex gap-2">
