@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 function Toggle() {
-  const buttonRef=useRef(null)
+  const buttonRef = useRef(null);
   function handleClick() {
-    console.log('hola');
+    console.log("hola");
   }
   return (
-    <section className="flex justify-between my-4">
+    <section className="flex justify-between items-center xl:gap-4 my-4">
       <p className="text-DesaturatedBlue(Text) font-bold ">Dark Mode</p>
       <label
         ref={buttonRef}
