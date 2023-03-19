@@ -1,6 +1,6 @@
 function OverviewCard({ Image, ViewsLikes, nViews, Percent, Icon }) {
-  const ImageSrc = `./src/images/icon-${Image}.svg`;
-  const ImageIcon = `./src/images/icon-${Icon}.svg`;
+  const ImageSrc = `/images/icon-${Image}.svg`;
+  const ImageIcon = `/images/icon-${Icon}.svg`;
   return (
     <div className="w-326 h-auto p-6 bg-DarkDesaturatedBlue(CardBG) rounded-md flex flex-col gap-5">
       <div className="flex justify-between">
