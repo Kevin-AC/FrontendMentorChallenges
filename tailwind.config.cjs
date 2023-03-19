@@ -24,7 +24,7 @@ module.exports = {
         ToggleBlue: "hsl(210, 78%, 56%)",
         ToggleGreen: "hsl(146, 68%, 55%)",
         "VeryDarkBlue(BG)": "hsl(230, 17%, 14%)",
-        "VeryDarkBlue(Top BG Pattern)": "hsl(232, 19%, 15%)",
+        "VeryDarkBlue(TopBGPattern)": "hsl(232, 19%, 15%)",
         "DarkDesaturatedBlue(CardBG)": "hsl(228, 28%, 20%)",
         'DesaturatedBlue(Text)': 'hsl(228, 34%, 66%)',
         "White(Text)": "hsl(0, 0%, 100%)",

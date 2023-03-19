@@ -4,7 +4,7 @@ import OverviewCard from "./components/OverviewCard";
 
 function App() {
   return (
-    <div className="w-full h-auto grid place-content-center bg-VeryDarkBlue(BG)">
+    <div className="w-full h-auto grid place-content-center bg-White(BG) dark:bg-VeryDarkBlue(BG)">
       <div className="w-375 p-6 grid gap-5">
         <section className=" font-bold grid gap-3 pb-4 border-b border-DesaturatedBlue(Text)">
           <h1 className="text-white text-2xl">Social Media Dashboard</h1>
