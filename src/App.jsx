@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Card from "./components/Card";
 import OverviewCard from "./components/OverviewCard";
 import Footer from "./components/Footer";
 function App() {
   const [darkToggle, setDarkToggle] = React.useState(true);
   useEffect(() => {
+    AOS.init();
     document.body.classList.toggle("dark", darkToggle);
-  }, [darkToggle]);
+  }, [][darkToggle]);
 
   return (
     <main
@@ -14,10 +17,15 @@ function App() {
         darkToggle && "dark"
       }`}
     >
-      <div className=" max-w-7xl flex flex-col gap-5 ">
+      <div className="w-full h-64 bg-VeryPaleBlue(TopBGPattern) dark:bg-VeryDarkBlue(TopBGPattern) absolute rounded-b-3xl top-0 z-0"></div>
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+        className=" max-w-7xl flex flex-col gap-5  z-10 "
+      >
         <section className="p-4 md:flex md:justify-between  md:items-center md:px-[100px]">
           <div className=" font-bold grid gap-3 pb-4 ">
-            <h1 className="text-VeryDarkBlue(Text) dark:text-white text-2xl xl:text-3xl">
+            <h1 className="text-VeryDarkBlue(Text) dark:text-white text-2xl xl:text-3xl ">
               Social Media Dashboard
             </h1>
             <p className="text-DarkGrayishBlue(Text) dark:text-DesaturatedBlue(Text)">
@@ -29,13 +37,17 @@ function App() {
             <p className="text-DarkGrayishBlue(Text) dark:text-White(Text) font-bold ">
               Dark Mode
             </p>
-            <label className="relative inline-flex items-center cursor-pointer">
+            <label
+              for="switch"
+              className="relative inline-flex items-center cursor-pointer"
+            >
               <input
+                id="switch"
                 type="checkbox"
                 onClick={() => setDarkToggle(!darkToggle)}
-                className="sr-only peer"
+                className="sr-only peer "
               />
-              <div className="w-12 h-6  peer-focus:outline-none rounded-full bg-gradient-to-r from-ToggleGreen to-ToggleBlue peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-VeryDarkBlue(TopBGPattern) peer-checked:after:bg-White(BG)  after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-ToggleL peer-checked:hover:bg-ToggleGreen"></div>
+              <div className="w-12 h-6   peer-focus:outline-none rounded-full bg-gradient-to-r from-ToggleGreen to-ToggleBlue peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[3px] after:bg-VeryDarkBlue(TopBGPattern) peer-checked:after:bg-White(BG)  after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-ToggleL peer-checked:hover:bg-ToggleGreen"></div>
             </label>
           </div>
         </section>
