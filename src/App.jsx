@@ -48,7 +48,7 @@ function App() {
                 onClick={() => setDarkToggle(!darkToggle)}
                 className="sr-only peer "
               />
-              <div className="w-12 h-6   peer-focus:outline-none rounded-full bg-gradient-to-r from-ToggleGreen to-ToggleBlue peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[3px] after:bg-VeryDarkBlue(TopBGPattern) peer-checked:after:bg-White(BG)  after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-ToggleL peer-checked:hover:bg-ToggleGreen"></div>
+              <span className="toggle"></span>
             </label>
           </div>
         </section>
