@@ -1,19 +1,43 @@
-import Toggle from "./components/Toggle";
+import React, { useEffect } from "react";
 import Card from "./components/Card";
 import OverviewCard from "./components/OverviewCard";
 import Footer from "./components/Footer";
 function App() {
+  const [darkToggle, setDarkToggle] = React.useState(true);
+  useEffect(() => {
+    document.body.classList.toggle("dark", darkToggle);
+  }, [darkToggle]);
+
   return (
-    <main className="w-full min-h-screen p-4 grid place-items-center bg-VeryDarkBlue(BG) ">
+    <main
+      className={`w-full min-h-screen p-4 grid place-items-center bg-White(BG) dark:bg-VeryDarkBlue(BG) ${
+        darkToggle && "dark"
+      }`}
+    >
       <div className=" max-w-7xl flex flex-col gap-5 ">
-        <section className="p-4 xl:flex xl:justify-between  xl:items-center xl:px-[100px]">
+        <section className="p-4 md:flex md:justify-between  md:items-center md:px-[100px]">
           <div className=" font-bold grid gap-3 pb-4 ">
-            <h1 className="text-white text-2xl">Social Media Dashboard</h1>
-            <p className="text-DesaturatedBlue(Text)">
+            <h1 className="text-VeryDarkBlue(Text) dark:text-white text-2xl xl:text-3xl">
+              Social Media Dashboard
+            </h1>
+            <p className="text-DarkGrayishBlue(Text) dark:text-DesaturatedBlue(Text)">
               Total Followwers: 23,004
             </p>
           </div>
-          <Toggle />
+
+          <div className="flex justify-between items-center md:gap-4 my-4">
+            <p className="text-DarkGrayishBlue(Text) dark:text-White(Text) font-bold ">
+              Dark Mode
+            </p>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                onClick={() => setDarkToggle(!darkToggle)}
+                className="sr-only peer"
+              />
+              <div className="w-12 h-6  peer-focus:outline-none rounded-full bg-gradient-to-r from-ToggleGreen to-ToggleBlue peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-VeryDarkBlue(TopBGPattern) peer-checked:after:bg-White(BG)  after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-ToggleL peer-checked:hover:bg-ToggleGreen"></div>
+            </label>
+          </div>
         </section>
 
         <div className="flex flex-col gap-5 items-center md:flex-wrap md:flex-row md:justify-center ">
@@ -51,8 +75,10 @@ function App() {
           />
         </div>
 
-        <div className=" font-bold my-4 xl:px-[100px]">
-          <h1 className="text-white text-2xl">Overview - Today</h1>
+        <div className=" font-bold my-4 md:px-[100px]">
+          <h1 className="text-VeryDarkBlue(Text) dark:text-white text-2xl">
+            Overview - Today
+          </h1>
         </div>
         <div className="flex flex-col gap-5 items-center md:flex-row md:flex-wrap md:justify-center ">
           <OverviewCard

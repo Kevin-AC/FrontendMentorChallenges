@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
+.CardStyle {
+  @apply w-full h-full  rounded-md  bg-VeryPaleBlue(TopBGPattern) hover:bg-LightGrayishBlue(CardBG) hover:cursor-pointer hover:dark:bg-DarkHover dark:bg-DarkDesaturatedBlue(CardBG) flex flex-col items-center justify-center gap-4;
+}
+.borde {
+  @apply w-64 h-218 pt-1  rounded-md;
+}
 @tailwind utilities;

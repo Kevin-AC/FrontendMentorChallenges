@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <div className="text-center font-bold text-White(Text) my-4 ">
+    <div className="text-center font-bold text-VeryDarkBlue(Text) dark:text-White(Text) my-4 ">
       Challenge by{" "}
       <a
-        className="text-DesaturatedBlue(Text)"
+        className="text-DarkGrayishBlue(Text) dark:text-DesaturatedBlue(Text)"
         href="https://www.frontendmentor.io?ref=challenge"
         target="_blank"
       >
@@ -11,7 +11,7 @@ function Footer() {
       </a>
       . <br />
       Coded by{" "}
-      <a className="text-DesaturatedBlue(Text)" href="#">
+      <a className="text-DarkGrayishBlue(Text) dark:text-DesaturatedBlue(Text)" href="https://www.frontendmentor.io/profile/Kevin-AC">
         Kevin Argumedo
       </a>
       .
