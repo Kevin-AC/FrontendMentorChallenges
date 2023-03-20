@@ -43,6 +43,7 @@ function App() {
             >
               <input
                 id="switch"
+                aria-label="Toggle Button"
                 type="checkbox"
                 onClick={() => setDarkToggle(!darkToggle)}
                 className="sr-only peer "
