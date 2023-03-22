@@ -1,4 +1,6 @@
 function Card({ price, plan, storage, users, send }) {
+  
+  
   return (
     <div
       className={` w-[328px] h-[440px] px-6 py-6 rounded-xl flex flex-col justify-center gap-7
@@ -48,9 +50,9 @@ function Card({ price, plan, storage, users, send }) {
         <p className=" py-4">Send up to {send} GB</p>
       </div>
       <button
-        className={`uppercase rounded-lg h-12  ${
+        className={`uppercase rounded-lg h-12 hover:from-white hover:to-white hover:text-LinearGradient2 hover:border border-GrayishBlue  ${
           plan == "Professional"
-            ? "bg-VeryLightGrayishBlue text-LinearGradient2"
+            ? "bg-white hover:bg-[hsl(237.3,64.16%,66.08%)] border-white text-LinearGradient2 hover:text-white"
             : "bg-gradient-to-r from-LinearGradient1 to-LinearGradient2 text-VeryLightGrayishBlue"
         }`}
       >
