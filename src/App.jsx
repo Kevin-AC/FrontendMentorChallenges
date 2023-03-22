@@ -5,7 +5,7 @@ function App() {
   const [toggle, setToggle] = React.useState(true);
  
   return (
-    <div className="w-full bg-VeryLightGrayishBlue grid place-content-center min-h-screen relative overflow-hidden">
+    <main className="w-full bg-VeryLightGrayishBlue grid place-content-center min-h-screen relative overflow-hidden">
       <img
         src="/images/bg-top.svg"
         className="absolute -top-11 -right-44 z-0 xl:-right-0"
@@ -22,7 +22,7 @@ function App() {
           htmlFor="switch"
           className="relative cursor-pointer inline-flex items-center gap-4"
         >
-          <p className="text-LightGrayishBlue">Annually</p>
+          <span className="text-LightGrayishBlue">Annually</span>
           <input
             id="switch"
             type="checkbox"
@@ -31,10 +31,10 @@ function App() {
             onClick={()=>setToggle(!toggle)}
           />
           <span className="toggle hover:opacity-50"></span>
-          <p className="text-LightGrayishBlue">Monthly</p>
+          <span className="text-LightGrayishBlue">Monthly</span>
         </label>
 
-        <section className="flex flex-col xl:flex-row gap-4 xl:gap-1 xl:items-center">
+        <div className="flex flex-col xl:flex-row gap-4 xl:gap-1 xl:items-center">
           <Card
             price={toggle ? 199.99 : 19.99}
             plan="Basic"
@@ -56,10 +56,10 @@ function App() {
             users="10"
             send="20"
           />
-        </section>
+        </div>
         <Footer />
       </div>
-    </div>
+    </main>
   );
 }
 export default App;
