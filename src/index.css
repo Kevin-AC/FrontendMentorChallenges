@@ -1,14 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @tailwind base;
 @tailwind components;
-.CardStyle {
-  @apply w-full h-full  rounded-md  bg-VeryPaleBlue(TopBGPattern) hover:bg-LightGrayishBlue(CardBG) hover:cursor-pointer hover:dark:bg-DarkHover dark:bg-DarkDesaturatedBlue(CardBG) flex flex-col items-center justify-center gap-4;
+.toggle {
+  @apply w-12 h-6 peer-focus:outline-none rounded-full bg-gradient-to-r from-LinearGradient1 to-LinearGradient2 peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[89px] after:bg-VeryLightGrayishBlue peer-checked:after:bg-VeryLightGrayishBlue  after:rounded-full after:h-5 after:w-5 after:transition-all;
 }
-.borde {
-  @apply w-64 h-218 pt-1  rounded-md;
-}
-.toggle{
-  @apply w-12 h-6   peer-focus:outline-none rounded-full bg-gradient-to-r from-ToggleGreen to-ToggleBlue peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[3px] after:bg-VeryDarkBlue(TopBGPattern) peer-checked:after:bg-White(BG)  after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-ToggleL peer-checked:hover:bg-ToggleGreen
-}
-
 @tailwind utilities;

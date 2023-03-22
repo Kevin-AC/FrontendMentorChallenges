@@ -1,42 +1,61 @@
-function Card({ Social, FollowersN, Subscribers, Today, image, icon }) {
-  const imageSrc = `/images/icon-${image}.svg`;
-  const iconImage = `/images/icon-${icon}.svg`;
+function Card({ price, plan, storage, users, send }) {
   return (
     <div
-      className={`borde ${
-        image == "facebook"
-          ? "bg-Facebook"
-          : image == "twitter"
-          ? "bg-Twitter"
-          : image == "instagram"
-          ? "bg-gradient-to-r from-Instagram1 to-Instagram2"
-          : "bg-BrightRed"
-      }`}
+      className={` w-[328px] h-[440px] px-6 py-6 rounded-xl flex flex-col justify-center gap-7
+      ${
+        plan == "Professional"
+          ? "bg-gradient-to-t from-LinearGradient2 to-LinearGradient1 xl:h-[480px] "
+          : "bg-white "
+      }
+      `}
     >
-      <div className="CardStyle">
-        <div className="flex gap-2">
-          <img src={imageSrc} alt="icon" />
-          <p className="text-DarkGrayishBlue(Text) dark:text-DesaturatedBlue(Text) font-bold">
-            {Social}
-          </p>
-        </div>
-        <p className="text-6xl font-bold text-VeryDarkBlue(Text) dark:text-White(Text)">
-          {FollowersN}
-        </p>
-        <p className="text-center font-light  tracking-[4px] text-DarkGrayishBlue(Text) dark:text-DesaturatedBlue(Text) ">
-          {Subscribers}
-        </p>
-        <div className="flex items-center gap-1 font-bold">
-          <img src={iconImage} width="10" alt="icon" />
-          <p
-            className={` ${
-              icon == "down" ? "text-BrightRed" : "text-LimeGreen"
-            }`}
-          >
-            {Today} Today
-          </p>
-        </div>
+      <p
+        className={`text-base ${
+          plan == "Professional"
+            ? "text-VeryLightGrayishBlue"
+            : "text-GrayishBlue"
+        }`}
+      >
+        {plan}
+      </p>
+      <div className="flex items-center justify-center">
+        <p className={`text-3xl ${
+          plan == "Professional"
+            ? "text-VeryLightGrayishBlue"
+            : "text-DarkGrayishBlue"
+        }`}>$</p>
+      <p
+        className={`text-6xl ${
+          plan == "Professional"
+            ? "text-VeryLightGrayishBlue"
+            : "text-DarkGrayishBlue"
+        }`}
+      >
+        {price}
+      </p>
+
       </div>
+      
+      <div
+        className={`border-t border-b py-1 ${
+          plan == "Professional"
+            ? "text-VeryLightGrayishBlue"
+            : "text-GrayishBlue"
+        } `}
+      >
+        <p className=" border-b py-4 ">{storage} Storage</p>
+        <p className=" border-b py-4">{users} Users Allowed</p>
+        <p className=" py-4">Send up to {send} GB</p>
+      </div>
+      <button
+        className={`uppercase rounded-lg h-12  ${
+          plan == "Professional"
+            ? "bg-VeryLightGrayishBlue text-LinearGradient2"
+            : "bg-gradient-to-r from-LinearGradient1 to-LinearGradient2 text-VeryLightGrayishBlue"
+        }`}
+      >
+        Learn More
+      </button>
     </div>
   );
 }
