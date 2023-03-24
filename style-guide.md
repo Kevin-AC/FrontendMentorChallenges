@@ -11,22 +11,26 @@ The designs were created to the following widths:
 
 ### Primary
 
-- LinearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+- Red: hsl(1, 90%, 64%)
+- Blue: hsl(219, 85%, 26%)
 
 ### Neutral
 
-- VeryLightGrayish Blue: hsl(240, 78%, 98%)
-- LightGrayishBlue: hsl(234, 14%, 74%)
-- GrayishBlue: hsl(233, 13%, 49%)
-- DarkGrayishBlue: hsl(232, 13%, 33%)
+- White: hsl(0, 0%, 100%)
+- Verylightgrayishblue: hsl(210, 60%, 98%)
+- Lightgrayishblue1: hsl(211, 68%, 94%)
+- Lightgrayishblue2: hsl(205, 33%, 90%)
+- Grayishblue: hsl(219, 14%, 63%)
+- Darkgrayishblue: hsl(219, 12%, 42%)
+- Verydarkblue: hsl(224, 21%, 14%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 15px
+- Font size (paragraph): 16px
 
 ### Font
 
-- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- Weight: 700
+- Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+- Weights: 500, 800

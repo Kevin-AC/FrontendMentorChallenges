@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;800&display=swap');
 @tailwind base;
 @tailwind components;
-.toggle {
-  @apply w-12 h-6 peer-focus:outline-none rounded-full bg-gradient-to-r from-LinearGradient1 to-LinearGradient2 peer-checked:after:translate-x-full  after:content-[''] after:absolute after:top-[2px] after:left-[89px] after:bg-VeryLightGrayishBlue peer-checked:after:bg-VeryLightGrayishBlue  after:rounded-full after:h-5 after:w-5 after:transition-all;
-}
 @tailwind utilities;

@@ -1,24 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html',
+    './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-        LinearGradient1: 'hsl(236, 72%, 79%)',
-        LinearGradient2: 'hsl(237, 63%, 64%)',
-        VeryLightGrayishBlue: 'hsl(240, 78%, 98%)',
-        LightGrayishBlue: 'hsl(234, 14%, 74%)',
-        GrayishBlue: 'hsl(233, 13%, 49%)',
-        DarkGrayishBlue: 'hsl(232, 13%, 33%)',
-        '': ''
-      },
       fontFamily: {
-        Montserrat: 'Montserrat'
+        jakarta: 'Plus Jakarta Sans'
       },
-      backgroundImage: {
-        'bg-top': 'url(/images/bg-top.svg)'
+      colors: {
+        Red: 'hsl(1, 90%, 64%)',
+        Blue: 'hsl(219, 85%, 26%)',
+        White: 'hsl(0, 0%, 100%)',
+        Verylightgrayishblue: 'hsl(210, 60%, 98%)',
+        Lightgrayishblue1: 'hsl(211, 68%, 94%)',
+        Lightgrayishblue2: 'hsl(205, 33%, 90%)',
+        Grayishblue: 'hsl(219, 14%, 63%)',
+        Darkgrayishblue: 'hsl(219, 12%, 42%)',
+        Verydarkblue: 'hsl(224, 21%, 14%)'
       }
-
     }
   },
   plugins: []
