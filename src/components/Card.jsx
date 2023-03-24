@@ -6,7 +6,7 @@ function Card ({ image, name, text, picture, message, activity, date, notificati
         <img src={imageSrc} width={45} alt='Profile img' />
         <div className='text-sm text-Darkgrayishblue font-medium'>
           <strong className='text-Verydarkblue'>{name}</strong> {text}
-          <span className={` text-Darkgrayishblue font-bold ${activity === 'Chess Club' ? 'text-Blue' : ''}`}> {activity}</span>
+          <span className={`  font-bold ${activity === 'Chess Club' ? 'text-Blue' : 'text-Darkgrayishblue'}`}> {activity}</span>
           <span className={` text-Red ${notification === false ? 'hidden' : ''}`}> ●</span><br />
           <span className='text-Grayishblue'>{date}</span>
         </div>
