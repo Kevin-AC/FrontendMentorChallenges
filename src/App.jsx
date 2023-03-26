@@ -1,17 +1,44 @@
 import Card from './components/Card'
-
+import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 function App () {
+  const [counter, setCounter] = useState({
+    number: 3,
+    M: { isRead: true, cliked: false },
+    A: { isRead: true, cliked: false },
+    J: { isRead: true, cliked: false }
+
+  })
+
+  const handleMark = () => {
+    setCounter({
+      number: counter.number = 0,
+      M: { isRead: false },
+      A: { isRead: false },
+      J: { isRead: false }
+    })
+  }
+  const handdleClick = (id) => {
+    if (counter.number === 0) return
+    if (counter[id].cliked) return
+    setCounter({
+      ...counter,
+      [id]: { ...counter[id], isRead: false, cliked: true },
+      number: counter.number - 1
+    })
+  }
   return (
     <div className='bg-white border w-full grid place-content-center min-h-screen '>
       <div className='w-[375px] p-4 h-auto flex flex-col gap-4 '>
         <div className='flex items-center justify-between'>
           <div className='flex gap-2  items-center'>
             <p className='text-2xl font-extrabold text-Verydarkblue'>Notifications</p>
-            <span className='bg-Blue w-7 h-6 grid place-content-center text-White font-bold rounded-md'>3</span>
+            <p className='bg-Blue w-7 h-6 grid place-content-center text-White font-bold rounded-md'>{counter.number}</p>
           </div>
-          <button className='border-none outline-none text-Darkgrayishblue font-medium'>Mark all as read</button>
+          <button onClick={handleMark} className='border-none outline-none text-Darkgrayishblue font-medium'>Mark all as read</button>
         </div>
         <Card
+          handdleClick={() => handdleClick('M')}
           image='mark-webber'
           name='Mark Webber'
           text='reacted to your recent post'
@@ -19,9 +46,10 @@ function App () {
           message=''
           activity='My first tournament today!'
           date='1m ago'
-          notification
+          isRead={counter.M.isRead}
         />
         <Card
+          handdleClick={() => handdleClick('A')}
           image='angela-gray'
           name='Angela Gray'
           text='followed you'
@@ -29,9 +57,11 @@ function App () {
           message=''
           activity=''
           date='5m ago'
-          notification
+          isRead={counter.A.isRead}
+
         />
         <Card
+          handdleClick={() => handdleClick('J')}
           image='jacob-thompson'
           name='Jacob Thompson'
           text='has joined your group'
@@ -39,7 +69,8 @@ function App () {
           message=''
           activity='Chess Club'
           date='1 day ago'
-          notification
+          isRead={counter.J.isRead}
+
         />
         <Card
           image='rizky-hasanuddin'
@@ -50,7 +81,7 @@ function App () {
                     I'm already having lots of fun and improving my game.`}
           activity=''
           date='5 day ago'
-          notification={false}
+          isRead={false}
         />
         <Card
           image='kimberly-smith'
@@ -60,7 +91,7 @@ function App () {
           message=''
           activity=''
           date='1 week ago'
-          notification={false}
+          isRead={false}
         />
         <Card
           image='nathan-peterson'
@@ -70,7 +101,7 @@ function App () {
           message=''
           activity='5 end-game strategies to increase your win rate'
           date='2 weeks ago'
-          notification={false}
+          isRead={false}
         />
         <Card
           image='anna-kim'
@@ -80,7 +111,7 @@ function App () {
           message=''
           activity='Chess Club'
           date='2 weeks ago'
-          notification={false}
+          isRead={false}
         />
 
       </div>
