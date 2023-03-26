@@ -29,7 +29,7 @@ function App () {
     })
   }
   return (
-    <div className='bg-Verylightgrayishblue border w-full grid place-content-center min-h-screen '>
+    <main className='bg-Verylightgrayishblue border w-full grid place-content-center min-h-screen '>
       <div className='w-full xl:max-w-[730px] bg-white my-5 rounded-xl p-4 xl:p-8 h-auto flex flex-col gap-4 '>
         <div className='flex items-center justify-between'>
           <div className='flex gap-2  items-center'>
@@ -117,7 +117,7 @@ function App () {
       </div>
       <Footer />
 
-    </div>
+    </main>
   )
 }
 export default App
