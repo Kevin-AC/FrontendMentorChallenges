@@ -33,7 +33,7 @@ function App () {
       <div className='w-full xl:max-w-[730px] bg-white my-5 rounded-xl p-4 xl:p-8 h-auto flex flex-col gap-4 '>
         <div className='flex items-center justify-between'>
           <div className='flex gap-2  items-center'>
-            <p className='text-2xl font-extrabold text-Verydarkblue'>Notifications</p>
+            <h1 className='text-2xl font-extrabold text-Verydarkblue'>Notifications</h1>
             <p className='bg-Blue w-7 h-6 grid place-content-center text-White font-bold rounded-md'>{counter.number}</p>
           </div>
           <button onClick={handleMark} className='border-none outline-none text-Darkgrayishblue font-medium hover:text-Blue'>Mark all as read</button>
@@ -43,7 +43,6 @@ function App () {
           image='mark-webber'
           name='Mark Webber'
           text='reacted to your recent post'
-          picture=''
           message=''
           activity='My first tournament today!'
           date='1m ago'
@@ -54,7 +53,6 @@ function App () {
           image='angela-gray'
           name='Angela Gray'
           text='followed you'
-          picture=''
           message=''
           activity=''
           date='5m ago'
@@ -66,7 +64,6 @@ function App () {
           image='jacob-thompson'
           name='Jacob Thompson'
           text='has joined your group'
-          picture=''
           message=''
           activity='Chess Club'
           date='1 day ago'
@@ -76,7 +73,6 @@ function App () {
           image='rizky-hasanuddin'
           name='Rizky Hasanuddin'
           text='sent you a private message'
-          picture=''
           message={`Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
                     I'm already having lots of fun and improving my game.`}
           activity=''
@@ -97,7 +93,6 @@ function App () {
           image='nathan-peterson'
           name='Nathan Peterson'
           text='reacted to your recent post'
-          picture=''
           message=''
           activity='5 end-game strategies to increase your win rate'
           date='2 weeks ago'
@@ -107,7 +102,6 @@ function App () {
           image='anna-kim'
           name='Anna Kim'
           text='left the group'
-          picture=''
           message=''
           activity='Chess Club'
           date='2 weeks ago'
