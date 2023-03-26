@@ -1,6 +1,7 @@
 import Card from './components/Card'
 import React, { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
+import Footer from './components/Footer'
+// import { v4 as uuidv4 } from 'uuid'
 function App () {
   const [counter, setCounter] = useState({
     number: 3,
@@ -28,14 +29,14 @@ function App () {
     })
   }
   return (
-    <div className='bg-white border w-full grid place-content-center min-h-screen '>
-      <div className='w-[375px] p-4 h-auto flex flex-col gap-4 '>
+    <div className='bg-Verylightgrayishblue border w-full grid place-content-center min-h-screen '>
+      <div className='w-full xl:max-w-[730px] bg-white my-5 rounded-xl p-4 xl:p-8 h-auto flex flex-col gap-4 '>
         <div className='flex items-center justify-between'>
           <div className='flex gap-2  items-center'>
             <p className='text-2xl font-extrabold text-Verydarkblue'>Notifications</p>
             <p className='bg-Blue w-7 h-6 grid place-content-center text-White font-bold rounded-md'>{counter.number}</p>
           </div>
-          <button onClick={handleMark} className='border-none outline-none text-Darkgrayishblue font-medium'>Mark all as read</button>
+          <button onClick={handleMark} className='border-none outline-none text-Darkgrayishblue font-medium hover:text-Blue'>Mark all as read</button>
         </div>
         <Card
           handdleClick={() => handdleClick('M')}
@@ -70,7 +71,6 @@ function App () {
           activity='Chess Club'
           date='1 day ago'
           isRead={counter.J.isRead}
-
         />
         <Card
           image='rizky-hasanuddin'
@@ -115,6 +115,7 @@ function App () {
         />
 
       </div>
+      <Footer />
 
     </div>
   )

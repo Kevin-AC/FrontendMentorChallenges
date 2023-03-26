@@ -10,15 +10,15 @@ function Card ({ image, name, text, picture, message, activity, date, isRead, ha
       <div className='flex items-start gap-4'>
         <img src={imageSrc} width={45} alt='Profile img' />
         <div className='text-sm text-Darkgrayishblue font-medium'>
-          <strong className='text-Verydarkblue'>{name}</strong> {text}
-          <span className={`  font-bold ${activity === 'Chess Club' ? 'text-Blue' : 'text-Darkgrayishblue'}`}> {activity}</span>
+          <strong className='text-Verydarkblue hover:text-Blue'>{name}</strong> {text}
+          <span className='hover:text-Blue  font-bold'> {activity}</span>
           <span className={` text-Red ${isRead === false ? 'hidden' : ''}`}> ●</span><br />
           <span className='text-Grayishblue'>{date}</span>
         </div>
         <img className={`${picture === '' ? 'hidden' : ''}`} src={picture} width={45} alt='picture' />
       </div>
-      <div className={`text-sm text-Darkgrayishblue pl-16  ${message === '' ? 'hidden' : ''}`}>
-        <p className='border p-4 rounded-md'>{message}</p>
+      <div className={`text-sm text-Darkgrayishblue pl-16   ${message === '' ? 'hidden' : ''}`}>
+        <p className='border p-4 rounded-md hover:bg-Lightgrayishblue2'>{message}</p>
       </div>
 
     </div>
