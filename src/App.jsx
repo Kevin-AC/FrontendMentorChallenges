@@ -43,6 +43,7 @@ function App () {
           image='mark-webber'
           name='Mark Webber'
           text='reacted to your recent post'
+          picture={null}
           message=''
           activity='My first tournament today!'
           date='1m ago'
@@ -54,6 +55,7 @@ function App () {
           name='Angela Gray'
           text='followed you'
           message=''
+          picture={null}
           activity=''
           date='5m ago'
           isRead={counter.A.isRead}
@@ -65,6 +67,7 @@ function App () {
           name='Jacob Thompson'
           text='has joined your group'
           message=''
+          picture={null}
           activity='Chess Club'
           date='1 day ago'
           isRead={counter.J.isRead}
@@ -76,6 +79,7 @@ function App () {
           message={`Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
                     I'm already having lots of fun and improving my game.`}
           activity=''
+          picture={null}
           date='5 day ago'
           isRead={false}
         />
@@ -94,6 +98,7 @@ function App () {
           name='Nathan Peterson'
           text='reacted to your recent post'
           message=''
+          picture={null}
           activity='5 end-game strategies to increase your win rate'
           date='2 weeks ago'
           isRead={false}
@@ -103,6 +108,7 @@ function App () {
           name='Anna Kim'
           text='left the group'
           message=''
+          picture={null}
           activity='Chess Club'
           date='2 weeks ago'
           isRead={false}
