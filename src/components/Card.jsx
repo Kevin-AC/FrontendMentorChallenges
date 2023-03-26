@@ -15,7 +15,8 @@ function Card ({ image, name, text, picture, message, activity, date, isRead, ha
           <span className={` text-Red ${isRead === false ? 'hidden' : ''}`}> ●</span><br />
           <span className='text-Grayishblue'>{date}</span>
         </div>
-        <img className={`${picture === null ? 'hidden' : ''}`} src={picture} width={45} alt='picture' />
+        {picture && <img src={picture} width={45} alt='picture' />}
+        {/* <img className={`${picture === null ? 'hidden' : ''}`} src={picture} width={45} alt='picture' /> */}
       </div>
       <div className={`text-sm text-Darkgrayishblue pl-16   ${message === '' ? 'hidden' : ''}`}>
         <p className='border p-4 rounded-md hover:bg-Lightgrayishblue2'>{message}</p>
