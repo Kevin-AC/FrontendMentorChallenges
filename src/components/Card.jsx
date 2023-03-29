@@ -1,7 +1,7 @@
 function Card ({ imgSrc, tipe, score }) {
   const img = `${imgSrc}`
   return (
-    <article className={`w-full h-14 rounded-xl flex justify-between items-center px-4 
+    <div className={`w-full h-14 rounded-xl flex justify-between items-center px-4 
     ${tipe === 'Reaction'
                 ? 'bg-LightredB'
       : tipe === 'Memory'
@@ -25,7 +25,7 @@ function Card ({ imgSrc, tipe, score }) {
         </p>
       </div>
       <p className=' font-extrabold text-Darkgrayblue'>{score} / <span className='font-semibold text-Lightlavender'>100</span> </p>
-    </article>
+    </div>
   )
 }
 export default Card
