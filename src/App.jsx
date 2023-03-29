@@ -6,7 +6,7 @@ function App () {
   const [data, setData] = useState([])
   useEffect(() => {
     async function fetchData () {
-      const response = await fetch('src/data.json')
+      const response = await fetch('/data.json')
       const jdata = await response.json()
       setData(jdata)
     }
