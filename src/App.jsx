@@ -26,7 +26,7 @@ function App () {
         <p className='text-center text-Lightlavender text-lg '>You scored higher than 65% of the people who have taken these tests.</p>
       </section>
       <section className='p-4 xl:px-11 flex flex-col gap-4 xl:gap-6 xl:pt-7 w-[370px]  '>
-        <p className='text-Darkgrayblue text-lg xl:text-2xl font-bold '>Summary</p>
+        <h2 className='text-Darkgrayblue text-lg xl:text-2xl font-bold '>Summary</h2>
         {data.map((item, index) => (
           <Card
             key={index}
