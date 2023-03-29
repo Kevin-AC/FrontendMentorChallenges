@@ -1,29 +1,31 @@
-function Card ({ image, name, text, picture, message, activity, date, isRead, handdleClick, id }) {
-  const imageSrc = `/assets/images/avatar-${image}.webp`
-
+function Card ({ imgSrc, tipe, score }) {
+  const img = `${imgSrc}`
   return (
-    <div
-      className={`w-full p-3 h-auto rounded-xl flex flex-col gap-3 hover:cursor-pointer ${isRead ? 'bg-Verylightgrayishblue ' : ''}`}
-      onClick={handdleClick}
+    <article className={`w-full h-14 rounded-xl flex justify-between items-center px-4 
+    ${tipe === 'Reaction'
+                ? 'bg-LightredB'
+      : tipe === 'Memory'
+                ? 'bg-OrangeyyellowB'
+      : tipe === 'Verbal' ? 'bg-GreentealB' : 'bg-CobaltblueB'
 
+      }
+    `}
     >
-      <div className='flex items-start gap-4'>
-        <img src={imageSrc} width={45} alt='Profile img' />
-        <div className='text-sm text-Darkgrayishblue font-medium'>
-          <strong className='text-Verydarkblue hover:text-Blue'>{name}</strong> {text}
-          <span className='hover:text-Blue  font-bold'> {activity}</span>
-          <span className={` text-Red ${isRead === false ? 'hidden' : ''}`}> ●</span><br />
-          <span className='text-Grayishblue'>{date}</span>
-        </div>
-        {picture && <img src={picture} width={45} alt='picture' />}
-        {/* <img className={`${picture === null ? 'hidden' : ''}`} src={picture} width={45} alt='picture' /> */}
-      </div>
-      <div className={`text-sm text-Darkgrayishblue pl-16   ${message === '' ? 'hidden' : ''}`}>
-        <p className='border p-4 rounded-md hover:bg-Lightgrayishblue2'>{message}</p>
-      </div>
+      <div className='flex gap-3'>
+        <img src={img} alt='' />
+        <p className={`font-semibold ${
+          tipe === 'Reaction'
+                    ? 'text-Lightred'
+          : tipe === 'Memory'
+                    ? 'text-Orangeyyellow'
+          : tipe === 'Verbal' ? 'text-Greenteal' : 'text-Cobaltblue'
 
-    </div>
-
+          }`}
+        >{tipe}
+        </p>
+      </div>
+      <p className=' font-extrabold text-Darkgrayblue'>{score} / <span className='font-semibold text-Lightlavender'>100</span> </p>
+    </article>
   )
 }
 export default Card

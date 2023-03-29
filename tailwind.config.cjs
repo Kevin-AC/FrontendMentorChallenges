@@ -4,19 +4,29 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        jakarta: 'Plus Jakarta Sans'
-      },
       colors: {
-        Red: 'hsl(1, 90%, 64%)',
-        Blue: 'hsl(219, 85%, 26%)',
+        Lightred: 'hsl(0, 100%, 67%)',
+        LightredB: 'hsl(0, 100%, 96%)',
+        Orangeyyellow: 'hsl(39, 100%, 56%)',
+        OrangeyyellowB: 'hsl(39, 100%, 96%)',
+        Greenteal: 'hsl(166, 100%, 37%)',
+        GreentealB: 'hsl(166, 100%, 96%)',
+        Cobaltblue: 'hsl(234, 85%, 45%)',
+        CobaltblueB: 'hsl(234, 85%, 96%)',
+        // gradient
+        Lightslateblue_background: 'hsl(252, 100%, 67%)',
+        Lightroyalblue_background: 'hsl(241, 81%, 54%)',
+        // circle gradient
+        Violetblue_circle: 'hsla(256, 72%, 46%, 1)',
+        Persianblue_circle: 'hsla(241, 72%, 46%, 0)',
+
         White: 'hsl(0, 0%, 100%)',
-        Verylightgrayishblue: 'hsl(210, 60%, 98%)',
-        Lightgrayishblue1: 'hsl(211, 68%, 94%)',
-        Lightgrayishblue2: 'hsl(205, 33%, 90%)',
-        Grayishblue: 'hsl(219, 14%, 63%)',
-        Darkgrayishblue: 'hsl(219, 12%, 42%)',
-        Verydarkblue: 'hsl(224, 21%, 14%)'
+        Paleblue: 'hsl(221, 100%, 96%)',
+        Lightlavender: 'hsl(241, 100%, 89%)',
+        Darkgrayblue: 'hsl(224, 30%, 27%)'
+      },
+      fontFamily: {
+        HankenGrotesk: 'Hanken Grotesk'
       }
     }
   },
