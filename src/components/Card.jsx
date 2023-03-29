@@ -13,7 +13,7 @@ function Card ({ imgSrc, tipe, score }) {
     >
       <div className='flex gap-3'>
         <img src={img} alt='' />
-        <p className={`font-semibold ${
+        <p className={`font-semibold text-lg ${
           tipe === 'Reaction'
                     ? 'text-Lightred'
           : tipe === 'Memory'
@@ -24,7 +24,7 @@ function Card ({ imgSrc, tipe, score }) {
         >{tipe}
         </p>
       </div>
-      <p className=' font-extrabold text-Darkgrayblue'>{score} / <span className='font-semibold text-Lightlavender'>100</span> </p>
+      <p className=' font-extrabold text-Darkgrayblue text-lg'>{score} / <span className='font-semibold text-Lightlavender'>100</span> </p>
     </div>
   )
 }
