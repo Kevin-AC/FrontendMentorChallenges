@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+   .boton{
+      @apply w-32 h-12 border border-White-text rounded-full font-bold text-Lightred
+   }
+   .subTitle{
+      @apply text-Verydarkgrayblue text-3xl font-medium
+   }
+@tailwind utilities;
+body {
+   display: grid;
+   place-content: center;
+   min-height: 100vh;
+}
+.headImg{
+   background-image: url(src/assets/images/bg-pattern-intro-mobile.svg);
+
+}
