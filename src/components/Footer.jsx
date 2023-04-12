@@ -1,7 +1,7 @@
 function Footer () {
   return (
     <section className='w-full h-auto py-16 flex flex-col justify-center items-center gap-7 bg-Verydarkblackblue(footerbackground) rounded-tr-[84px]'>
-      <img src='src/assets/images/logo.svg' alt='logo' />
+      <img src='/assets/images/logo.svg' alt='logo' />
       <div className='text-center text-Grayishblue(footertext)'>
         <p className='text-white font-semibold mb-5'>Product</p>
         <ul className='flex flex-col gap-2'>

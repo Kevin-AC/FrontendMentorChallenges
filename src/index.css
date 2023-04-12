@@ -8,13 +8,32 @@
    .subTitle{
       @apply text-Verydarkgrayblue text-3xl font-medium
    }
+   .menu__container{
+      @apply w-full flex flex-col justify-center items-center
+      
+   }
+   .menuIten{
+      @apply text-Verydarkgrayishblue(bodycopy) font-medium flex gap-2 items-center justify-center
+   }
+   .menuIten__container{
+      @apply w-[90%] mt-3 bg-Grayishblue rounded-md
+   }
+   .menuIten__li{
+      @apply text-Verydarkgrayishblue(bodycopy) text-center text-sm
+   }
+   .menu{
+      @apply absolute flex flex-col justify-center items-center gap-4 bg-White-text shadow-2xl  min-h-[60vh] left-0 right-0 m-auto top-20 w-[90%] rounded-md 
+   }
 @tailwind utilities;
+
 body {
    display: grid;
    place-content: center;
    min-height: 100vh;
 }
 .headImg{
-   background-image: url(src/assets/images/bg-pattern-intro-mobile.svg);
-
+   background-image: url(/assets/images/bg-pattern-intro-mobile.svg);
+}
+.StateImg{
+   background-image: url(/assets/images/bg-pattern-circles.svg);
 }

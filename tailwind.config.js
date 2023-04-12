@@ -13,6 +13,7 @@ export default {
         //  Neutral
         'White-text': 'hsl(0, 0%, 100%)',
         'Grayishblue(footertext)': 'hsl(240, 2%, 79%)',
+        Grayishblue: '#EFEFF1',
         'Verydarkgrayishblue(bodycopy)': ' hsl(207, 13%, 34%)',
         'Verydarkblackblue(footerbackground)': 'hsl(240, 10%, 16%)',
         //  Gradient
