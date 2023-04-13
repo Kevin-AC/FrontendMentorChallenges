@@ -1,9 +1,7 @@
-function Buttons ({ text }) {
+function Buttons ({ text, style }) {
   return (
     <button className={`
-      boton ${text === 'Learn More'
-        ? 'bg-none text-White-text'
-        : text === 'Sign Up' ? 'text-White-text bg-gradient-to-r from-Verylightred to-Lightred' : 'bg-White-text'}`}
+      w-32 h-12 border border-White-text rounded-full font-bold ${style} ${text === 'Sign Up' ? 'xl:text-Lightred xl:bg-gradient-to-r from-White-text to-White-text' : ''} `}
     >
       {text}
     </button>

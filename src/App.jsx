@@ -4,10 +4,10 @@ import Text from './components/Text'
 
 function App () {
   return (
-    <main className='w-[375px] h-screen  text-Overpass'>
+    <main className='w-screen h-screen  text-Overpass'>
       <Head />
       <section className='flex flex-col justify-center gap-6 items-center p-4'>
-        <h2 className='subTitle'>Designed for the future</h2>
+        <h2 className='subTitle text-center'>Designed for the future</h2>
         <div>
           <img src='/assets/images/illustration-editor-mobile.svg' alt='mobileIllustration' />
         </div>

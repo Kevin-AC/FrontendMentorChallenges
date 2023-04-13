@@ -2,27 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
-   .boton{
-      @apply w-32 h-12 border border-White-text rounded-full font-bold text-Lightred
-   }
+   
    .subTitle{
       @apply text-Verydarkgrayblue text-3xl font-medium
    }
    .menu__container{
-      @apply w-full flex flex-col justify-center items-center
-      
+      @apply w-full flex flex-col justify-center items-center xl:w-32
    }
    .menuIten{
-      @apply text-Verydarkgrayishblue(bodycopy) font-medium flex gap-2 items-center justify-center
+      @apply text-Verydarkgrayishblue(bodycopy) xl:text-White-text font-medium flex gap-2 items-center justify-center
    }
    .menuIten__container{
-      @apply w-[90%] mt-3 bg-Grayishblue rounded-md
+      @apply w-[90%] mt-3 bg-Grayishblue rounded-md xl:absolute xl:w-44 xl:top-7
    }
    .menuIten__li{
       @apply text-Verydarkgrayishblue(bodycopy) text-center text-sm
    }
    .menu{
-      @apply absolute flex flex-col justify-center items-center gap-4 bg-White-text shadow-2xl  min-h-[60vh] left-0 right-0 m-auto top-20 w-[90%] rounded-md 
+      @apply absolute  flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-4 bg-White-text xl:bg-transparent  shadow-2xl xl:min-h-fit  min-h-[60vh] left-0 right-0 m-auto top-28 w-[90%]  rounded-md  xl:ml-48
    }
 @tailwind utilities;
 
