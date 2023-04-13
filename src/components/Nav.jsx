@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Buttons from './Buttons'
-function Nav () {
+function Nav ({ style }) {
   const [toggle, setToggle] = useState({
     M: { toggleState: true },
     P: { toggleState: true },
@@ -16,11 +16,11 @@ function Nav () {
     console.log(toggle[id])
   }
   return (
-    <header className='p-4 relative'>
-      <nav className='flex justify-between items-center w-full'>
-        <section className='flex justify-between items-center w-full'>
+    <section className='w-full absolute px-4 pt-16 xl:w-4/5  '>
+      <nav className='w-full h-8 flex  justify-between items-center  '>
+        <section className='flex justify-between items-center w-full xl:w-auto '>
           <img src='/assets/images/logo.svg' alt='logo' />
-          <div onClick={() => handleToggle('M')}>
+          <div className='xl:hidden' onClick={() => handleToggle('M')}>
             <aside className={`cursor-pointer ${toggle.M.toggleState ? 'block' : 'hidden'}`}>
               <img src='/assets/images/icon-hamburger.svg' />
             </aside>
@@ -29,8 +29,8 @@ function Nav () {
             </aside>
           </div>
         </section>
-        <section className={`menu p-4 py-8 ${!toggle.M.toggleState ? '' : 'hidden'}`}>
-          <ul className=' w-full h-auto flex flex-col items-center gap-8 font-Ubuntu'>
+        <section className={`menu p-4 xl:p-0  ${!toggle.M.toggleState ? '' : '-top-[550px] xl:top-14'}`}>
+          <ul className='w-full xl:w-auto h-auto flex flex-col xl:flex-row items-center gap-8 xl:gap-4 font-Ubuntu '>
             <li className='menu__container '>
               <a
                 className='menuIten '
@@ -40,9 +40,9 @@ function Nav () {
                 <span>Product</span>
                 <img src='/assets/images/icon-arrow-dark.svg' />
               </a>
-              <div className={`menuIten__container ${toggle.P.toggleState ? 'hidden' : ''}`}>
+              <div className={`menuIten__container  ${toggle.P.toggleState ? 'hidden' : ''}`}>
                 <ul className=' flex flex-col gap-3 p-5'>
-                  <li className='menuIten__li'>Contact</li>
+                  <li className='menuIten__li '>Contact</li>
                   <li className='menuIten__li'>Newsletter</li>
                   <li className='menuIten__li'>Linkedin</li>
                 </ul>
@@ -86,14 +86,17 @@ function Nav () {
 
             </li>
           </ul>
-          <div className='w-full mt-5 font-medium flex flex-col gap-5 items-center pt-5 border-t text-Verydarkgrayishblue(bodycopy) '>
-            <a href='#'>Login</a>
-            <Buttons text='Sign Up' />
+          <div className='w-full xl:w-auto mt-5 xl:mt-0 font-medium flex flex-col xl:flex-row gap-5 items-center pt-5 xl:pt-0 border-t xl:border-none text-Verydarkgrayishblue(bodycopy) '>
+            <a className='xl:text-White-text' href='#'>Login</a>
+            <Buttons
+              text='Sign Up'
+              style='text-White-text bg-gradient-to-r from-Verylightred to-Lightred '
+            />
           </div>
         </section>
 
       </nav>
-    </header>
+    </section>
   )
 }
 export default Nav
