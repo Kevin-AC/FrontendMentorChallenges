@@ -25,8 +25,11 @@ export default {
         Verydarkdesaturatedblue: ' hsl(237, 23%, 32%)'
       },
       backgroundImage: {
-        mobileImg: "url('src/assets/images/bg-pattern-intro-mobile.svg')",
-        deskImg: "url('src/assets/images/bg-pattern-intro-desktop.svg')"
+        headImg: "url('/assets/images/bg-pattern-intro-mobile.svg')",
+        deskHeadImg: "url('/assets/images/bg-pattern-intro-desktop.svg')",
+        arrowL: "url('/assets/images/icon-arrow-light.svg')",
+        arrowD: "url('/assets/images/icon-arrow-dark.svg')",
+        StateImg: "url('/assets/images/bg-pattern-circles.svg')"
       }
 
     }

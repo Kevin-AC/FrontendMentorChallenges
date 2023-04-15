@@ -30,21 +30,25 @@ function Nav ({ style }) {
           </div>
         </section>
         <section className={`menu p-4 xl:p-0  ${!toggle.M.toggleState ? '' : '-top-[550px] xl:top-14'}`}>
-          <ul className='w-full xl:w-auto h-auto flex flex-col xl:flex-row items-center gap-8 xl:gap-4 font-Ubuntu '>
+          <ul className='w-full xl:w-auto h-auto  flex flex-col xl:flex-row items-center gap-8 xl:gap-4 font-Ubuntu '>
             <li className='menu__container '>
               <a
-                className='menuIten '
+                className='menuIten'
                 href='#'
                 onClick={() => handleToggle('P')}
               >
                 <span>Product</span>
-                <img src='/assets/images/icon-arrow-dark.svg' />
+                <span className={`w-[14px] h-2 bg-arrowD xl:bg-arrowL bg-cover bg-no-repeat 
+                      ${!toggle.P.toggleState ? 'rotate-180' : ''}`}
+                />
               </a>
               <div className={`menuIten__container  ${toggle.P.toggleState ? 'hidden' : ''}`}>
                 <ul className=' flex flex-col gap-3 p-5'>
-                  <li className='menuIten__li '>Contact</li>
-                  <li className='menuIten__li'>Newsletter</li>
-                  <li className='menuIten__li'>Linkedin</li>
+                  <li className='menuIten__li '>Overview</li>
+                  <li className='menuIten__li'>Pricing</li>
+                  <li className='menuIten__li'>Marketplace</li>
+                  <li className='menuIten__li'>Features</li>
+                  <li className='menuIten__li'>Integrations</li>
                 </ul>
               </div>
 
@@ -56,25 +60,30 @@ function Nav ({ style }) {
                 onClick={() => handleToggle('CP')}
               >
                 <span>Company</span>
-                <img src='/assets/images/icon-arrow-dark.svg' />
+                <span className={`w-[14px] h-2 bg-arrowD xl:bg-arrowL bg-cover bg-no-repeat 
+                      ${!toggle.CP.toggleState ? 'rotate-180' : ''}`}
+                />
               </a>
               <div className={`menuIten__container ${toggle.CP.toggleState ? 'hidden' : ''}`}>
                 <ul className=' flex flex-col gap-3 p-5'>
-                  <li className='menuIten__li'>Contact</li>
-                  <li className='menuIten__li'>Newsletter</li>
-                  <li className='menuIten__li'>Linkedin</li>
+                  <li className='menuIten__li'>About</li>
+                  <li className='menuIten__li'>Team</li>
+                  <li className='menuIten__li'>Blog</li>
+                  <li className='menuIten__li'>Careers</li>
                 </ul>
               </div>
 
             </li>
-            <li className='menu__container '>
+            <li className='menu__container  '>
               <a
                 className='menuIten flex gap-2 items-center justify-center'
                 href='#'
                 onClick={() => handleToggle('CT')}
               >
                 <span>Contact</span>
-                <img src='/assets/images/icon-arrow-dark.svg' />
+                <span className={`w-[14px] h-2 bg-arrowD xl:bg-arrowL bg-cover bg-no-repeat 
+                      ${!toggle.CT.toggleState ? 'rotate-180' : ''}`}
+                />
               </a>
               <div className={`menuIten__container ${toggle.CT.toggleState ? 'hidden' : ''}`}>
                 <ul className=' flex flex-col gap-3 p-5'>
@@ -86,11 +95,12 @@ function Nav ({ style }) {
 
             </li>
           </ul>
-          <div className='w-full xl:w-auto mt-5 xl:mt-0 font-medium flex flex-col xl:flex-row gap-5 items-center pt-5 xl:pt-0 border-t xl:border-none text-Verydarkgrayishblue(bodycopy) '>
+          <div className='w-full xl:w-auto mt-4 xl:mt-0 font-medium flex flex-col xl:flex-row gap-5 items-center pt-5 xl:pt-0 border-t xl:border-none text-Verydarkgrayishblue(bodycopy) '>
             <a className='xl:text-White-text' href='#'>Login</a>
             <Buttons
               text='Sign Up'
-              style='text-White-text bg-gradient-to-r from-Verylightred to-Lightred '
+              style='text-White-text bg-gradient-to-r from-Verylightred to-Lightred border-none
+                     xl:bg-gradient-to-r from-White-text to-White-text xl:text-Lightred'
             />
           </div>
         </section>

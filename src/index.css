@@ -2,25 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
-   
+
    .subTitle{
-      @apply text-Verydarkgrayblue text-3xl font-medium
+      @apply text-Verydarkgrayblue text-3xl font-medium text-center 
    }
    .menu__container{
       @apply w-full flex flex-col justify-center items-center xl:w-32
    }
    .menuIten{
-      @apply text-Verydarkgrayishblue(bodycopy) xl:text-White-text font-medium flex gap-2 items-center justify-center
+      @apply w-full text-Verydarkgrayishblue(bodycopy) xl:text-White-text font-medium flex gap-2 items-center justify-center 
    }
    .menuIten__container{
-      @apply w-[90%] mt-3 bg-Grayishblue rounded-md xl:absolute xl:w-44 xl:top-7
+      @apply w-[90%] mt-3 bg-Grayishblue rounded-md xl:absolute xl:w-36 xl:top-7
    }
    .menuIten__li{
-      @apply text-Verydarkgrayishblue(bodycopy) text-center text-sm
+      @apply text-Verydarkgrayishblue(bodycopy) text-center text-sm xl:text-left xl:font-medium xl:hover:font-semibold hover:no-underline xl:hover:text-Verydarkgrayblue
    }
    .menu{
-      @apply absolute  flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-4 bg-White-text xl:bg-transparent  shadow-2xl xl:min-h-fit  min-h-[60vh] left-0 right-0 m-auto top-28 w-[90%]  rounded-md  xl:ml-48
+      @apply absolute  flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-4 bg-White-text xl:bg-transparent  shadow-2xl xl:shadow-none xl:min-h-fit  min-h-[60vh] left-0 right-0 m-auto top-28 w-[90%]  rounded-md  xl:ml-48
    }
+   
 @tailwind utilities;
 
 body {
@@ -28,9 +29,19 @@ body {
    place-content: center;
    min-height: 100vh;
 }
-.headImg{
-   background-image: url(/assets/images/bg-pattern-intro-mobile.svg);
+
+.state {
+   background-image: url(/assets/images/bg-pattern-circles.svg), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+   background-position: -490px -700px, center top;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+ @media (max-width: 467px) {
+   .state {
+      background-position: center top;
+    }
 }
-.StateImg{
-   background-image: url(/assets/images/bg-pattern-circles.svg);
-}
+ ul li:hover{
+   text-decoration: underline;
+   cursor: pointer;
+ }
