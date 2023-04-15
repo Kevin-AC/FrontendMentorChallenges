@@ -1,6 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 :root{
-    --fuenteP:font-family: 'Outfit', sans-serif;
+    --fuenteP:'Outfit', sans-serif;
     --White: hsl(0, 0%, 100%);
     --LightGray: hsl(212, 45%, 89%);
     --GrayishBlue: hsl(220, 15%, 55%);
@@ -9,6 +9,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -31,29 +32,28 @@ body{
 
 .main-container{
     background-color: var(--White);
-    max-width: 320px;
-    margin:60px auto;
+    max-width: 325px;
+    margin:80px auto;
     border-radius: 16px;
     padding: 16px ;
-    
+    padding-bottom: 38px; 
 }
-.img-container img{ 
+.img-container{ 
     width:100%;
     border-radius: 1.6rem;
     margin-bottom: 24px;
 }
 h1{
     color: var(--DarkBlue);
-    
-    font-size: 23px;
+    font-size: 21px;
     text-align: center;
     margin-bottom: 24px;
 }
 p{
-    font-size: 18px;
+    font-size: 16px;
     color: var(--GrayishBlue);
     text-align: center;
 }
 h1,p{
-    padding: 0 25px;
+    padding: 0 10px;
 }
