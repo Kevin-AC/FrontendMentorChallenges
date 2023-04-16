@@ -29,7 +29,7 @@ function Nav ({ style }) {
             </aside>
           </div>
         </section>
-        <section className={`menu p-4 xl:p-0  ${!toggle.M.toggleState ? '' : '-top-[550px] xl:top-14'}`}>
+        <section className={`menu p-4 xl:p-0  ${!toggle.M.toggleState ? '' : 'hidden xl:flex xl:top-14'}`}>
           <ul className='w-full xl:w-auto h-auto  flex flex-col xl:flex-row items-center gap-8 xl:gap-4 font-Ubuntu '>
             <li className='menu__container '>
               <a
@@ -95,8 +95,8 @@ function Nav ({ style }) {
 
             </li>
           </ul>
-          <div className='w-full xl:w-auto mt-4 xl:mt-0 font-medium flex flex-col xl:flex-row gap-5 items-center pt-5 xl:pt-0 border-t xl:border-none text-Verydarkgrayishblue(bodycopy) '>
-            <a className='xl:text-White-text' href='#'>Login</a>
+          <div className='w-full xl:w-auto mt-4 xl:mt-0 font-bold text-lg flex flex-col xl:flex-row gap-5 items-center pt-5 xl:pt-0 border-t xl:border-none text-Verydarkgrayishblue(bodycopy) '>
+            <a className='xl:text-White-text ' href='#'>Login</a>
             <Buttons
               text='Sign Up'
               style='text-White-text bg-gradient-to-r from-Verylightred to-Lightred border-none

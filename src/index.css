@@ -4,7 +4,7 @@
 @tailwind components;
 
    .subTitle{
-      @apply text-Verydarkgrayblue text-3xl font-medium text-center 
+      @apply text-Verydarkgrayblue text-3xl font-bold text-center 
    }
    .menu__container{
       @apply w-full flex flex-col justify-center items-center xl:w-32
@@ -19,7 +19,7 @@
       @apply text-Verydarkgrayishblue(bodycopy) text-center text-sm xl:text-left xl:font-medium xl:hover:font-semibold hover:no-underline xl:hover:text-Verydarkgrayblue
    }
    .menu{
-      @apply absolute  flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-4 bg-White-text xl:bg-transparent  shadow-2xl xl:shadow-none xl:min-h-fit  min-h-[60vh] left-0 right-0 m-auto top-28 w-[90%]  rounded-md  xl:ml-48
+      @apply absolute  flex flex-col xl:flex-row justify-center md:justify-start xl:justify-between items-center gap-4 bg-White-text xl:bg-transparent   shadow-2xl xl:shadow-none xl:min-h-fit   left-0 right-0 m-auto top-28 w-[90%]  rounded-md  xl:ml-48
    }
    
 @tailwind utilities;

@@ -1,6 +1,6 @@
 function Footer () {
   return (
-    <section className='w-full h-auto py-16 flex flex-col xl:flex-row justify-center xl:justify-evenly items-center xl:items-start gap-7 bg-Verydarkblackblue(footerbackground) rounded-tr-[84px]'>
+    <section className='w-full h-auto py-16 mt-16 flex flex-col md:flex-row justify-center md:justify-evenly items-center md:items-start gap-7 bg-Verydarkblackblue(footerbackground) rounded-tr-[84px]'>
       <img src='/assets/images/logo.svg' alt='logo' />
       <div className='text-center text-Grayishblue(footertext)'>
         <p className='text-white font-semibold mb-5'>Product</p>
