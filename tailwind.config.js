@@ -10,6 +10,7 @@ export default {
       colors: {
         'Lightred(CTAtext)': ' hsl(356, 100%, 66%)',
         'Verylightred(CTAhoverbackground)': 'hsl(355, 100%, 74%)',
+        'Verydarkblue(headings)': 'hsl(208, 49%, 24%)',
         //  Neutral
         'White-text': 'hsl(0, 0%, 100%)',
         'Grayishblue(footertext)': 'hsl(240, 2%, 79%)',

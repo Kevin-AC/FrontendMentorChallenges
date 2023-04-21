@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Buttons from './Buttons'
-function Nav ({ style }) {
+function Nav () {
+  // const [open, setOpen] = useState(false)
   const [toggle, setToggle] = useState({
     M: { toggleState: true },
     P: { toggleState: true },
@@ -13,8 +14,14 @@ function Nav ({ style }) {
       ...toggle,
       [id]: { ...toggle[id], toggleState: !toggle[id].toggleState }
     })
-    console.log(toggle[id])
   }
+  const menuRef = useRef()
+  const tagRef = useRef()
+  // window.addEventListener('click', (e) => {
+  //   if (e.target !== menuRef.current && e.target !== tagRef.current) {
+  //     setOpen(false)
+  //   }
+  // })
   return (
     <section className='w-full absolute px-4 pt-16 xl:w-4/5  '>
       <nav className='w-full h-8 flex  justify-between items-center  '>
@@ -30,30 +37,34 @@ function Nav ({ style }) {
           </div>
         </section>
         <section className={`menu p-4 xl:p-0  ${!toggle.M.toggleState ? '' : 'hidden xl:flex xl:top-14'}`}>
-          <ul className='w-full xl:w-auto h-auto  flex flex-col xl:flex-row items-center gap-8 xl:gap-4 font-Ubuntu '>
-            <li className='menu__container '>
+          <div className='w-full xl:w-auto h-auto  flex flex-col xl:flex-row items-center gap-8 xl:gap-4 font-Ubuntu '>
+            <article className='menu__container '>
               <a
                 className='menuIten'
                 href='#'
+                // onClick={() => setOpen(!open)}
                 onClick={() => handleToggle('P')}
+
               >
-                <span>Product</span>
+                <span ref={tagRef}>Product</span>
                 <span className={`w-[14px] h-2 bg-arrowD xl:bg-arrowL bg-cover bg-no-repeat 
                       ${!toggle.P.toggleState ? 'rotate-180' : ''}`}
                 />
               </a>
-              <div className={`menuIten__container  ${toggle.P.toggleState ? 'hidden' : ''}`}>
-                <ul className=' flex flex-col gap-3 p-5'>
-                  <li className='menuIten__li '>Overview</li>
-                  <li className='menuIten__li'>Pricing</li>
-                  <li className='menuIten__li'>Marketplace</li>
-                  <li className='menuIten__li'>Features</li>
-                  <li className='menuIten__li'>Integrations</li>
-                </ul>
-              </div>
+              {!toggle.P.toggleState && (
+                <div ref={menuRef} className='menuIten__container'>
+                  <ul className=' flex flex-col gap-3 p-5'>
+                    <li className='menuIten__li '>Overview</li>
+                    <li className='menuIten__li'>Pricing</li>
+                    <li className='menuIten__li'>Marketplace</li>
+                    <li className='menuIten__li'>Features</li>
+                    <li className='menuIten__li'>Integrations</li>
+                  </ul>
+                </div>
+              )}
 
-            </li>
-            <li className='menu__container '>
+            </article>
+            <article className='menu__container '>
               <a
                 className='menuIten flex gap-2 items-center justify-center'
                 href='#'
@@ -64,17 +75,18 @@ function Nav ({ style }) {
                       ${!toggle.CP.toggleState ? 'rotate-180' : ''}`}
                 />
               </a>
-              <div className={`menuIten__container ${toggle.CP.toggleState ? 'hidden' : ''}`}>
-                <ul className=' flex flex-col gap-3 p-5'>
-                  <li className='menuIten__li'>About</li>
-                  <li className='menuIten__li'>Team</li>
-                  <li className='menuIten__li'>Blog</li>
-                  <li className='menuIten__li'>Careers</li>
-                </ul>
-              </div>
-
-            </li>
-            <li className='menu__container  '>
+              {!toggle.CP.toggleState && (
+                <div className='menuIten__container '>
+                  <ul className=' flex flex-col gap-3 p-5'>
+                    <li className='menuIten__li'>About</li>
+                    <li className='menuIten__li'>Team</li>
+                    <li className='menuIten__li'>Blog</li>
+                    <li className='menuIten__li'>Careers</li>
+                  </ul>
+                </div>
+              )}
+            </article>
+            <article className='menu__container  '>
               <a
                 className='menuIten flex gap-2 items-center justify-center'
                 href='#'
@@ -85,16 +97,18 @@ function Nav ({ style }) {
                       ${!toggle.CT.toggleState ? 'rotate-180' : ''}`}
                 />
               </a>
-              <div className={`menuIten__container ${toggle.CT.toggleState ? 'hidden' : ''}`}>
-                <ul className=' flex flex-col gap-3 p-5'>
-                  <li className='menuIten__li'>Contact</li>
-                  <li className='menuIten__li'>Newsletter</li>
-                  <li className='menuIten__li'>Linkedin</li>
-                </ul>
-              </div>
+              {!toggle.CT.toggleState && (
+                <div className='menuIten__container'>
+                  <ul className=' flex flex-col gap-3 p-5'>
+                    <li className='menuIten__li'>Contact</li>
+                    <li className='menuIten__li'>Newsletter</li>
+                    <li className='menuIten__li'>Linkedin</li>
+                  </ul>
+                </div>
+              )}
 
-            </li>
-          </ul>
+            </article>
+          </div>
           <div className='w-full xl:w-auto mt-4 xl:mt-0 font-bold text-lg flex flex-col xl:flex-row gap-5 items-center pt-5 xl:pt-0 border-t xl:border-none text-Verydarkgrayishblue(bodycopy) '>
             <a className='xl:text-White-text ' href='#'>Login</a>
             <Buttons
