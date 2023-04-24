@@ -10,7 +10,7 @@ function Body () {
       <section className="w-full h-auto  overflow-hidden flex flex-col xl:gap-32">
         <article className='text-center mt-16 xl:mt-32  xl:pb-40 relative'>
           <h2 className="headings">Designed for the future</h2>
-          <div className="w-full xl:w-3/5  xl:mt-28 xl:px-32 flex flex-col gap-14">
+          <div className="w-full xl:w-3/5  xl:mt-28 xl:px-32 flex flex-col">
             <picture
               data-aos='fade-down'
               data-aos-easing='linear'
@@ -20,8 +20,10 @@ function Body () {
               <img src='/images/illustration-editor-desktop.svg' width={800} alt='Illustration' />
             </picture>
             <div
+              className='flex flex-col gap-7'
               data-aos='fade-right'
               data-aos-duration='1500'>
+
               <Text
                 title='Introducing an extensible editor'
                 styleP='xl:pr-4'
@@ -69,6 +71,7 @@ function Body () {
               <img src='/images/illustration-laptop-desktop.svg' width={800} alt='Illustration' />
             </picture>
             <div
+              className='flex flex-col gap-7'
               data-aos='fade-left'
               data-aos-duration='1500'>
               <Text
