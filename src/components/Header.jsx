@@ -14,7 +14,7 @@ function Header () {
             </span>
           </div>
           {!menu && <Nav />}
-          <div className='max-[470px]:hidden '>
+          <div className='max-[1260px]:hidden '>
             <Nav />
           </div>
         </section>
