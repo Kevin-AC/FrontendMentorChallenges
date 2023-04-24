@@ -1,9 +1,9 @@
 function Footer () {
   return (
     <footer className="w-full h-auto py-16 flex justify-center rounded-tr-[120px] bg-Verydarkblackblue(footerbackground) ">
-      <div className="w-4/5 flex flex-col xl:flex-row items-center xl:items-start gap-4 xl:gap-28">
+      <div className="w-4/5 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-28">
         <img src="/images/logo.svg" alt="Logo" />
-          <ul className="pt-10 xl:pt-0 text-White-text flex flex-col xl:flex-row gap-4 xl:gap-28 ">
+          <ul className="pt-10 md:pt-0 text-White-text flex flex-col md:flex-row gap-4 md:gap-28 ">
           <li className="font-bold text-center xl:text-left">Product
               <ul className="menuUl xl:text-left relative mt-4 bg-transparent font-normal text-Grayishblue(footertext)">
                 <li><a href="#">Overview</a></li>
