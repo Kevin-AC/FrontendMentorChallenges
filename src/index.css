@@ -45,14 +45,23 @@ body {
 }
 @media screen and (max-width: 470px) {
    .headerImg{
-   background:  url(/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
-   background-repeat: no-repeat;
-   background-position: 37% 35%, 100%;
-}
+      background:  url(/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+      background-repeat: no-repeat;
+      background-position: 37% 35%, 100%;
+   }
 .state{
    background: url(/images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%) );
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center -250px, 100%;
+   }
 }
+@media screen and (max-width: 840px)  {
+    .headerImg{
+      background-position: 27% 45%, 100%;
+   }
+   .state{
+      background-size: cover;
+      background-position: center -250px, 100%;
+   }
 }
