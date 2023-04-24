@@ -57,9 +57,7 @@ body {
    }
 }
 @media screen and (max-width: 840px)  {
-    .headerImg{
-      background-position: 27% 45%, 100%;
-   }
+  
    .state{
       background-size: cover;
       background-position: center -250px, 100%;
