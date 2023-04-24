@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+   .navStyle{
+      @apply  bg-white xl:bg-transparent shadow-2xl xl:shadow-none rounded-lg m-auto xl:m-0
+   }
+   .menuCat {
+      @apply flex flex-col items-center xl:w-24 
+   }
+   .menuCatP  {
+      @apply font-medium text-Verydarkblue(headings) xl:text-White-text text-lg  flex items-center gap-2
+   }
+   .menuUl{
+      @apply bg-Grayishblue rounded-lg py-4 w-[95%] xl:w-32 xl:mt-10 flex flex-col gap-5 mt-3 text-center text-Verydarkblue(headings) xl:absolute
+   }
+   .menuUl li{
+      @apply hover:underline hover:font-semibold xl:hover:no-underline
+   }
+   .headings{
+      @apply text-Verydarkblue(headings) text-3xl xl:text-4xl font-medium
+   }
+@tailwind utilities;
+
+
+body {
+   display: grid;
+   place-content: center;
+   min-height: 100vh;
+}
+
+.headerImg{
+   background:  url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to bottom,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+   background-repeat: no-repeat;
+   background-size: 180%, 100%;
+   background-position: 30% 50%, 100%;
+}
+.state{
+   background: url(/images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%) );
+   background-repeat: no-repeat;
+   background-size: 71%, 100%;
+   background-position: -229px -542px, 100%;
+}
+@media screen and (max-width: 470px) {
+   .headerImg{
+   background:  url(/images/bg-pattern-intro-mobile.svg), linear-gradient(to bottom,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+   background-repeat: no-repeat;
+   background-position: 37% 35%, 100%;
+}
+.state{
+   background: url(/images/bg-pattern-circles.svg), linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%) );
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center -250px, 100%;
+}
+}
