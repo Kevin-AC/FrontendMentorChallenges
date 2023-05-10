@@ -1,6 +1,6 @@
 # Frontend Mentor - Project tracking intro component
 
-![Design preview for the Project tracking intro component coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Project tracking intro component coding challenge](.public/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
