@@ -3,6 +3,6 @@
 @tailwind base;
 @tailwind components;
     .nav{
-        @apply bg-white w-[90%] left-0 right-0 m-auto absolute top-14 border shadow-lg flex-col items-center gap-9 py-5
+        @apply bg-white sm:bg-transparent w-[90%] sm:w-auto left-0 right-0 m-auto sm:m-0 absolute sm:relative top-14 sm:top-0 shadow-lg sm:shadow-none flex-col sm:flex-row  items-center gap-9 sm:gap-5 py-5 sm:py-0
     }
 @tailwind utilities;
