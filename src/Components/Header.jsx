@@ -7,7 +7,7 @@ export function Header () {
     <section className=" w-full h-auto px-[7%] mt-10 flex justify-between items-center relative">
       <img src="/images/logo.svg" alt="Logo Web" />
       <div onClick={() => setOpen(!open)} className={`fas text-2xl text-VeryDarkBlue sm:hidden  ${open ? 'fa-bars' : 'fa-times'}`}></div>
-      <nav className={`nav ${!open ? 'flex' : 'hidden sm:flex'}`}>
+      <nav className={`nav z-50 ${!open ? 'flex' : 'hidden sm:flex'}`}>
         <ul className="ulNav text-VeryDarkBlue font-BarlowCondensed font-bold uppercase text-center flex flex-col sm:flex-row gap-4">
           <li><a href="#">product</a></li>
           <li><a href="#">features</a></li>
