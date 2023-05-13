@@ -4,7 +4,7 @@ import { Button } from './Components/Button'
 function App () {
   return (
     <main className="w-full h-auto text-lg font-BarlowCondensed relative z-50 overflow-hidden">
-      <div className='z-0 absolute -right-4 lg:-right-32 -top-20 w-3/5 h-96 bg-LightGrayishBlue rounded-b-[40px]'></div>
+      <div className='z-0 absolute -right-4 lg:-right-[120px] -top-20 w-3/5 h-96 bg-LightGrayishBlue rounded-b-[40px]'></div>
       <Header />
       <section className="w-auto h-auto lg:mt-20 mt-10 flex flex-col lg:flex-row gap-10 px-[7%] sm:items-center overflow-hidden">
         <img className='lg:order-1 lg:-mr-72 z-40' width={800} src="/images/illustration-devices.svg" alt="mainIlustration" />
