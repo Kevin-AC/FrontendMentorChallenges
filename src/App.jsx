@@ -8,7 +8,7 @@ import './index.css'
 
 
 function App() {
-  const { toggleCardActive,filteredCards,setFilter } = useCards();
+  const { toggleCardActive,filteredCards,setFilter,removeCard } = useCards();
   
   return (
     <main className="min-h-screen w-full flex flex-col gap-8 items-center bg-neutral-50 dark:bg-Neutral-900 p-6">
@@ -20,7 +20,10 @@ function App() {
       />
       <CardList 
         cards={filteredCards}
-        onToggle={toggleCardActive}/>
+        onToggle={toggleCardActive}
+        onRemove={removeCard}
+        />
+      <div>p</div>
     </main>
   )
 }

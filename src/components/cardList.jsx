@@ -1,7 +1,7 @@
 import Card from './card.jsx';
 
 
-function CardList({cards,onToggle}){
+function CardList({cards,onToggle,onRemove}){
    
     return(
         <div className='w-full  lg:w-2/3 flex flex-wrap gap-4 justify-center lg:justify-between'>
@@ -14,6 +14,7 @@ function CardList({cards,onToggle}){
                         description={card.description}
                         isActive={card.isActive}
                         onToggle={()=>onToggle(card.id)}
+                        onremove={()=>onRemove(card.id)}
                     />
                 </div>
             ))}

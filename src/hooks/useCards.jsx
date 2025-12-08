@@ -28,6 +28,12 @@ export function useCards() {
         )
     };
 
-    return {toggleCardActive,filteredCards,setFilter};
+    const removeCard = (cardId) => {
+        setCardsData(prevCards =>
+            prevCards.filter(card => card.id !== cardId)
+        )
+    }
+        
+    return {toggleCardActive,filteredCards,setFilter,removeCard};
 
 }
