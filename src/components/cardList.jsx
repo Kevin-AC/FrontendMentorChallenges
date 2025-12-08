@@ -10,9 +10,9 @@ const cardsData = DataJson.map(card => ({
 
 function CardList(){
     return(
-        <div>
+        <div className='w-full  lg:w-2/3 flex flex-wrap gap-4 justify-center lg:justify-between'>
             {cardsData.map((card, index) => (
-                <div key={index} className='sm:w-80 mb-3'>
+                <div key={index} >
                     <Card 
                         img={card.logo} 
                         title={card.name} 

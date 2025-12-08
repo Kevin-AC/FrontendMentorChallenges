@@ -10,7 +10,7 @@ function Header() {
         }
     },[darkMode]);
     return (
-        <div className="w-full flex items-center justify-between rounded-md shadow bg-neutral-100 dark:bg-Neutral-800 p-2 ">
+        <div className="w-full lg:w-2/3 flex items-center justify-between rounded-md shadow bg-neutral-100 dark:bg-Neutral-800 p-2 ">
             <img className="hidden dark:block" src="/assets/images/logo.svg" alt="logo" />
             <img className="dark:hidden" src="/assets/images/logo_d.svg" alt="logo_day" />
             <button 
