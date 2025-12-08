@@ -11,6 +11,7 @@ function Card({ title, description, img, isActive, onToggle,onremove }) {
             </section>
             <section className="flex justify-between items-center pt-4">
                 <button 
+                    type="button"
                     onClick={onremove}
                     className=' h-9 grid cursor-pointer place-content-center focus bg-Neutral-100 border-Neutral-200 dark:border-Neutral-700 dark:bg-Neutral-800 hover:bg-Red-500 hover:text-Neutral-100 dark:hover:text-Neutral-900  text-Neutral-900 dark:text-white px-4 py-2 rounded-3xl border '>
                     Remove
