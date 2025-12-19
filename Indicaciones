@@ -1,7 +1,0 @@
-Para cambiar de proyectos debe cambiar de ramas
-si quiere clonar un proyecto debe clonar con nombre de rama
-git clone -b (nombre rama) (url de repositorio)
-para subir cambios debe hacer
-git add .
- git commit -m"------"
-git push -u origin (nombre de rama)
