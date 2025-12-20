@@ -31,7 +31,7 @@ p{
     font-size: 16px;
 }
 .main-card{
-    width: 351px;
+    width: 350px;
     height: auto;
     border: 1.8px solid var(--Gray-950);
     border-radius: 1rem;
@@ -46,12 +46,13 @@ p{
 }
 .container-type{
     background-color: var(--Yellow);
-    width: 90px;
-    padding: 7px;
+    width: 80px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
     text-align: center;
     font-weight: 800;
+    letter-spacing: 0.6px;
 }
 .container-title{
     font-weight: 800;
@@ -59,6 +60,7 @@ p{
 .container-paragraph{
     font-weight: 500;
     color: var(--Gray-500);
+    line-height: 1.5;
 }
 .profile{
     display: flex;
@@ -66,13 +68,13 @@ p{
     gap: 1rem;
 }
 .profile img{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
 .profile p{
-    font-weight: 800;
-
+    font-weight: 700;
 }
 .attribution{
     padding-top: 30px;
+    font-weight: 500;
 }
