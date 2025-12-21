@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --stone100:hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600:hsl(30, 10%, 34%);
+    --stone900:hsl(24, 5%, 18%);
+    --brown800:hsl(14, 45%, 36%);
+    --rose800:hsl(332, 51%, 32%);
+    --rose50:hsl(330, 100%, 98%);
+    --font-family-serif: "Young Serif", serif;
+    --font-family-Outfit: "Outfit", sans-serif;
+    --font-Weight-normal:400;
+    --font-Weight-bold:600;
+    --font-Weight-extraBold:700;
+
+
+}
+@font-face {
+    font-family: "Young Serif";
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 100 900;
+}
+@font-face {
+    font-family: "Outfit";
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    font-weight: 100 900;
+}
+body{
+    font-family: var(--font-family-Outfit);
+}
+h1{
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+}
+h2{
+    font-family: var(--font-family-serif);
+    color: var(--brown800);
+    margin-bottom: 20px;
+}
+ul{
+    margin-left: 25px;
+}
+li{
+    padding-left: 20px;
+}
+span{
+    font-weight: 600;
+    color: var(--stone600);
+}
+.border{
+    border-bottom: 1px solid var(--stone150);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+.HeroImg{
+    width: calc(100% + 4rem);
+    height: 175px;
+    display: block;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+.HeroInfo{
+    padding-top: 10px;
+}
+.HeroInfo P{
+    padding: 20px 0px;
+    line-height: 1.6;
+    color: var(--stone600);
+}
+.Preparation-time{
+    width: auto;
+    background-color: var(--rose50);
+    border-radius: 1rem;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.Preparation-time h3{
+    color: var(--rose800);
+}
+.Preparation-time ul{
+    padding-top: 15px;
+    list-style-type: disc;
+}
+.Preparation-time ul li::marker{
+    color: var(--rose800);
+}
+.Preparation-time ul li{
+    margin-bottom: 1.2rem
+}
+.Preparation-time li{
+    color: var(--stone600);
+    padding-right: 25px;
+}
+
+.Ingredients ul li::marker{
+    color: var(--brown800);
+}
+.Ingredients ul li{
+    margin-bottom: 1.2rem
+}
+.Ingredients ul{
+    color: var(--stone600);
+}
+.Instructions ol li::marker{
+    font-weight: 700;
+    color: var(--brown800);
+}
+.Instructions ol{
+    padding-left: 1.5rem;
+}
+.Instructions ol li{
+    margin-bottom: 1.2rem;
+    color: var(--stone600);
+}
+.Nutrition p{
+    color: var(--stone600);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.Nutrition-Table{
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+.Nutrition-Table tr:not(:last-child) td{
+    border-bottom:1px solid var(--stone150);
+}
+.Nutrition-Table td{
+    padding: 0.85rem;
+    color: var(--stone600);
+}
+
+.Nutrition-Table td:last-child{
+    color: var(--brown800);
+    font-weight: 700;
+}
+.attribution{
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+@media(min-width: 1024px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--stone100);
+    }
+    .container {
+        max-width: 700px;
+        background-color: var(--White);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 4rem 0;
+    }
+    .HeroImg{
+        width: 100%;
+        height: 270px;
+        display: inline;
+        margin: 0;
+        padding: 0;
+        border-radius: 1rem;
+
+    }
+}
