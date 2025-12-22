@@ -89,8 +89,11 @@ span{
     padding: 20px;
     margin-bottom: 20px;
 }
-.Preparation-time h3{
+.Preparation-time h2{
     color: var(--rose800);
+    font-family: var(--font-family-Outfit);
+    font-size: large;
+    font-weight: 600
 }
 .Preparation-time ul{
     padding-top: 15px;
