@@ -26,18 +26,24 @@ body{
 h1,strong{
     color: var(--Purple-950);
 }
+.main-container{
+   
+}
 .hero{
     width: 100%;
     display: block;
 }
 .container{
+    width: 95%;
+    max-width: 375px;   /* límite para móviles */
+    margin-inline: auto;
     position: relative;
     background-color: var(--White);
-    margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
     margin-top: -100px;
     margin-bottom: 50px;
+    
 }
 .header{
     display: flex;
@@ -79,6 +85,9 @@ h1,strong{
     text-align: center;
     font-size: 11px;
 }
-@media screen {
-    
+@media screen and (min-width: 768px) {
+  .container{
+    max-width:500px;   
+  }
+
 }

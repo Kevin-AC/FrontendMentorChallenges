@@ -9,7 +9,13 @@
 </head>
 <body>
   <main class="main-container">
-    <img class="hero" src="./assets/images/background-pattern-mobile.svg" alt="">
+    <picture>
+      <source
+        media="(min-width:768px)"
+        srcset="./assets/images/background-pattern-desktop.svg">
+        <img class="hero" src="./assets/images/background-pattern-mobile.svg" alt="">
+      
+    </picture>
     <div class="container">
       <section class="header">
         <img src="./assets/images/icon-star.svg" alt="start-icon">
