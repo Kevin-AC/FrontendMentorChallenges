@@ -75,7 +75,12 @@ strong{
 .information strong:active{
    color: var(--Purple-Icon);
 }
-
+.information strong:hover{
+    cursor: pointer;
+}
+.information img:hover{
+    cursor: pointer;
+}
 .faqs-text{
     display: none;
     padding-bottom: 1.5rem;
