@@ -1,7 +1,9 @@
 export default function App() {
     return (
-        <main>
+        <main className="bg-Neutral-900 w-auto h-full">
             
+            
+
         </main>
     )
 }
