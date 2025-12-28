@@ -1,0 +1,33 @@
+{
+  "name": "weather-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Weather app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kevin-AC/FrontendMentorChallenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kevin-AC/FrontendMentorChallenges/issues"
+  },
+  "homepage": "https://github.com/Kevin-AC/FrontendMentorChallenges#readme",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18"
+  }
+}
