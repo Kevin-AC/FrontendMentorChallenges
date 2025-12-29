@@ -14,10 +14,10 @@ export default function WeatherInfo(){
                 </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-                <WeatherDetailCard />
-                <WeatherDetailCard />
-                <WeatherDetailCard />
-                <WeatherDetailCard />
+                <WeatherDetailCard value="64" text="Feels Like"/>
+                <WeatherDetailCard value="64" text="Feels Like" />
+                <WeatherDetailCard value="64" text="Feels Like" />
+                <WeatherDetailCard value="64" text="Feels Like" />
             </div>
         </section>
     )
