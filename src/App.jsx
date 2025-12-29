@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import Button from "./components/Button"
 import Search from "./components/Search"
 import WeatherInfo from "./components/WeatherInfo"
+import DailyForecast from "./components/DailyForecast"
 export default function App() {
     return (
         <main className="bg-Neutral-900 w-full h-auto p-4 ">
@@ -9,6 +10,7 @@ export default function App() {
             <h1 className="text-Neutral-0 font-bold text-5xl tracking-widest text-center py-12 ">How’s the sky looking today?</h1>
             <Search/>
             <WeatherInfo/>
+            <DailyForecast/>
             
 
             
