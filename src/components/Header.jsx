@@ -7,6 +7,7 @@ export default function Header(){
             <Button
                 iconSrc="assets/images/icon-units.svg"
                 text="Units"
+                Style={"bg-Neutral-800"}
             />
         </section>
     )

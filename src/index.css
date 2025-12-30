@@ -40,6 +40,6 @@
   /* Blue */
   --color-Blue-500: hsl(233, 67%, 56%);
   --color-Blue-700: hsl(248, 70%, 36%);
-  --font-sans: "BricolageGrotesque", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  
+  --font-sans: "DMSans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 }
