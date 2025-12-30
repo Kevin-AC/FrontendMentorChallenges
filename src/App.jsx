@@ -3,6 +3,7 @@ import Button from "./components/Button"
 import Search from "./components/Search"
 import WeatherInfo from "./components/WeatherInfo"
 import DailyForecast from "./components/DailyForecast"
+import HourlyForecast from "./components/HourlyForecast"
 export default function App() {
     return (
         <main className="bg-Neutral-900 w-full h-auto p-4 ">
@@ -11,6 +12,7 @@ export default function App() {
             <Search/>
             <WeatherInfo/>
             <DailyForecast/>
+            <HourlyForecast/>
             
 
             
