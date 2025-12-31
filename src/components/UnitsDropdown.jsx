@@ -6,12 +6,12 @@ export default function UnitsDropdown({unitTitle,unit1,unit2,isImperial}){
             <DropButton 
                 text={unit1}
                 icon={!isImperial}
-                style={!isImperial ? "bg-Neutral-600 ":""}
+                style={!isImperial ? "bg-Neutral-700 ":""}
             />
             <DropButton 
                 text={unit2}
                 icon={isImperial}
-                style={isImperial ? "bg-Neutral-600 ":""}
+                style={isImperial ? "bg-Neutral-700 ":""}
             />
         </div>
     )
