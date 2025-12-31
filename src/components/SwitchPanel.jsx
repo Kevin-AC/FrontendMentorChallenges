@@ -1,7 +1,5 @@
 import UnitsDropdown from "./UnitsDropdown";
-
 export default function SwitchPanel({isOpen,onClose,isImperial,onSwitchUnits}){
-    
     if(!isOpen) return null
     return(
         <section className="z-10  absolute right-3.5 top-15 w-53 h-auto px-2 py-1.5 flex flex-col gap-2 text-Neutral-0 bg-Neutral-800 rounded-xl border border-Neutral-600">
@@ -30,8 +28,6 @@ export default function SwitchPanel({isOpen,onClose,isImperial,onSwitchUnits}){
                     
                 />
             </div>
-           
-
         </section>
     )
 }
