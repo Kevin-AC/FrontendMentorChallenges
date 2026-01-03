@@ -30,13 +30,25 @@ export async function getWeatherByCity(nombreCiudad) {
             hour12: true,
         });
     }
-    const hourly = {
-        time: dataClima.hourly.time.slice(0, 8).map(formatearHora),
-        temperature_2m: dataClima.hourly.temperature_2m.slice(0, 8),
-        relative_humidity_2m: dataClima.hourly.relative_humidity_2m.slice(0, 8),
-        wind_speed_10m: dataClima.hourly.wind_speed_10m.slice(0, 8),
-        precipitation: dataClima.hourly.precipitation.slice(0, 8),
-    };
+    function formatearHora(isoString){
+        const fecha=new Date(isoString);
+        return fecha.toLocaleTimeString("en-US",{
+            hour:"numeric",
+            minute:"2-digit",
+            hour12:true,
+
+        })
+    }
+    const horaActual = new Date();
+    const indexHoraActual=dataClima.hourly.time.findIndex((t)=>{
+        const d= new Date(t);
+        return d.getHours()=== horaActual.getHours();
+    });
+    const inicioHora = indexHoraActual >=0 ? indexHoraActual:0;
+    const hourly={
+        time:dataClima.hourly.time.slice(inicioHora,inicioHora+8).map(formatearHora),
+        temperature_2m:dataClima.hourly.temperature_2m.slice(inicioHora,inicioHora+8),
+    }
 
     // 3. Devolver ya organizado para tu UI
     return {

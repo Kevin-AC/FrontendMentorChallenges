@@ -1,7 +1,7 @@
 import ForecastCard from "./ForecastCard";
-import { useMockWeather } from "../hooks/useMockWeather";
+import { useWeather } from "../hooks/useWeather";
 export default function DailyForecast(){
-    const weather = useMockWeather()
+    const weather = useWeather()
     if (!weather) {
         return <p className="text-Neutral-0">Cargando pronóstico...</p>;
     }

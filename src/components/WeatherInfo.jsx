@@ -1,7 +1,7 @@
 import WeatherDetailCard from "./WeatherDetailCard";
-import { useMockWeather } from "../hooks/useMockWeather";
+import { useWeather } from "../hooks/useWeather";
 export default function WeatherInfo(){
-    const weather = useMockWeather();
+    const weather = useWeather();
     if (!weather) {
         return (
             <section className="w-full h-auto mt-8 flex justify-center items-center">
