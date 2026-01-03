@@ -1,6 +1,6 @@
 // src/hooks/useMockWeather.js
 import { useEffect, useState } from "react";
-import { getWeatherMock } from "./api/mock_api";
+import { getWeatherMock } from "../api/mock_api";
 export function useMockWeather() {
     const [weather, setWeather] = useState(null);
 

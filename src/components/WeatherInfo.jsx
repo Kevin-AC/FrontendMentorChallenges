@@ -1,5 +1,5 @@
 import WeatherDetailCard from "./WeatherDetailCard";
-import { useMockWeather } from "../useMockWeather";
+import { useMockWeather } from "../hooks/useMockWeather";
 export default function WeatherInfo(){
     const weather = useMockWeather();
     if (!weather) {
@@ -35,7 +35,7 @@ export default function WeatherInfo(){
                 <WeatherDetailCard value={`${actual.feelsLike} °`} text="Feels Like"/>
                 <WeatherDetailCard value={`${actual.humidity} %`} text="Humidity" />
                 <WeatherDetailCard value={`${actual.wind} mph`} text="Wind" />
-                <WeatherDetailCard value={`${actual.precipitation} in`} text="precipitation" />
+                <WeatherDetailCard value={`${actual.precipitation} in`} text="Precipitation" />
             </div>
         </section>
     )
