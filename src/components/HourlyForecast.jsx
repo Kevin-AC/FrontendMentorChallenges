@@ -1,18 +1,12 @@
+import { useWeatherContext } from "../context/WeatherContext";
 import Button from "./Button";
 import DaysDropdown from "./DaysDropdown";
 import HourlyCard from "./HourlyCard";
 import { useState } from "react";
-import { useWeather } from "../hooks/useWeather";
 export default function HourlyForecast(){
     const [isSwitchPanelOpen, setIsSwitchPanelOpen]=useState(true)
-    const weather = useWeather()
-    if (!weather) {
-        return (
-            <section className="w-full h-auto mt-8 flex justify-center items-center">
-                <p className="text-Neutral-0">Cargando clima...</p>
-            </section>
-        );
-    }
+    const {weather} = useWeatherContext();
+    if (!weather)return;
     const { hourly,actual }=weather
     return(
         <section className="mt-8 bg-Neutral-800 opacity-100 rounded-2xl py-5 px-4 text-Neutral-0">

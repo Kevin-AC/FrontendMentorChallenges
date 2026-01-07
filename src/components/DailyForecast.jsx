@@ -1,9 +1,10 @@
+import { useWeatherContext } from "../context/WeatherContext";
 import ForecastCard from "./ForecastCard";
-import { useWeather } from "../hooks/useWeather";
+
 export default function DailyForecast(){
-    const weather = useWeather()
+    const {weather} = useWeatherContext();
     if (!weather) {
-        return <p className="text-Neutral-0">Cargando pronóstico...</p>;
+        return;
     }
     const { daily } = weather;
     function getWeekdayName(dataString){
@@ -11,7 +12,7 @@ export default function DailyForecast(){
         return data.toLocaleDateString('en-US',{weekday:"short"});
     }
     return(
-        <section className="mt-5">
+        <section className="mt-5 bg-Neutral-900">
             <h2 className="font-semibold text-2xl text-Neutral-0 mb-5">Daily forecast</h2>
             <div className="grid grid-cols-3 gap-4">
                 {daily.time.map((dataString,i)=>(

@@ -21,9 +21,9 @@ export default function WeatherInfo(){
     }
 
     const {ciudad,actual}=weather;
-   
+    
     return(
-        <section className="w-full h-auto mt-8 flex flex-col gap-4 items-center">
+        <section className="w-full h-auto mt-8 flex flex-col gap-4 items-center bg-Neutral-900">
             <div className="w-full h-71.5 py-20 px-5 flex flex-col justify-center rounded-3xl bg-no-repeat bg-center bg-cover  bg-[url(assets/images/bg-today-small.svg)] md:bg-[url(assets/images/bg-today-large.svg)] ">
                 <div className="text-Neutral-0 text-center">
                     <p className="font-bold text-3xl">{ciudad.nombre},{ciudad.pais}</p>
