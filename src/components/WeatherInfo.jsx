@@ -1,17 +1,27 @@
 import WeatherDetailCard from "./WeatherDetailCard";
-import { useWeather } from "../hooks/useWeather";
+import { useWeatherContext } from "../context/WeatherContext";
+
 export default function WeatherInfo(){
-    const weather = useWeather();
-    if (!weather) {
+    const { ciudadInput, weather } = useWeatherContext();
+    if (!ciudadInput) {
         return (
             <section className="w-full h-auto mt-8 flex justify-center items-center">
                 <p className="text-Neutral-0">Cargando clima...</p>
             </section>
         );
     }
+    if (!weather || typeof weather !== "object") {
+        return (
+            <section className="w-full h-auto mt-8 flex justify-center items-center">
+                <p className="text-Neutral-0">
+                    Cargando clima para <strong>{ciudadInput}</strong>...
+                </p>
+            </section>
+        );
+    }
 
-    const { ciudad, actual } = weather;
-    
+    const {ciudad,actual}=weather;
+   
     return(
         <section className="w-full h-auto mt-8 flex flex-col gap-4 items-center">
             <div className="w-full h-71.5 py-20 px-5 flex flex-col justify-center rounded-3xl bg-no-repeat bg-center bg-cover  bg-[url(assets/images/bg-today-small.svg)] md:bg-[url(assets/images/bg-today-large.svg)] ">

@@ -8,7 +8,6 @@ export default function App() {
     return (
         <main className="bg-Neutral-900 w-full h-auto p-4 pb-10">
             <Header/>
-            
             <h1 className="text-Neutral-0 font-bold text-5xl tracking-widest text-center py-12 font-[BricolageGrotesque] ">How’s the sky looking today?</h1>
             <Search/>
             <WeatherInfo/>
