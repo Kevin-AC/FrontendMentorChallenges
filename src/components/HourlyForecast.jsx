@@ -9,7 +9,7 @@ export default function HourlyForecast(){
     if (!weather)return;
     const { hourly,actual }=weather
     return(
-        <section className="mt-8 bg-Neutral-800 opacity-100 rounded-2xl py-5 px-4 text-Neutral-0">
+        <section className="mt-8 bg-Neutral-800 opacity-100 rounded-2xl py-5 px-4 md:p-6 text-Neutral-0">
             <div className="flex items-center justify-between">
                 <h2 className="font-semibold text-xl">Hourly forecast</h2>
                 <Button 
@@ -18,7 +18,7 @@ export default function HourlyForecast(){
                             weekday:"long",
                         })
                     }
-                    Style={"bg-Neutral-600"}
+                    Style={"bg-Neutral-600 w-30 h-9"}
                     onClick={()=>setIsSwitchPanelOpen(!isSwitchPanelOpen)}
                 
                 />

@@ -14,7 +14,7 @@ export default function DailyForecast(){
     return(
         <section className="mt-5 bg-Neutral-900">
             <h2 className="font-semibold text-2xl text-Neutral-0 mb-5">Daily forecast</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 md:flex">
                 {daily.time.map((dataString,i)=>(
                     <ForecastCard
                         key={dataString}
