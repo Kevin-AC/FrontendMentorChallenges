@@ -10,7 +10,7 @@ export default function Search(){
         setCiudadInput(value)
     }
     return(
-        <div className="w-full h-auto text-[20px] font-medium tracking-wider flex flex-col md:flex-row md:items-center md: gap-4 ">
+        <div className="w-full lg:w-2xl h-auto text-[20px] font-medium tracking-wider flex flex-col md:flex-row md:items-center md: gap-4 lg:mx-auto ">
             <input
                 type="text"
                 className="flex items-center gap-3 py-4 px-5 w-full  h-14 bg-Neutral-800 opacity-100 rounded-xl text-Neutral-200"
