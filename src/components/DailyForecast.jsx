@@ -6,7 +6,7 @@ export default function DailyForecast(){
     if (!weather) {
         return;
     }
-    const { daily } = weather;
+    const { daily} = weather;
     function getWeekdayName(dataString){
         const data= new Date(dataString);
         return data.toLocaleDateString('en-US',{weekday:"short"});
@@ -19,7 +19,7 @@ export default function DailyForecast(){
                     <ForecastCard
                         key={dataString}
                         day={getWeekdayName(dataString)}
-                        icon={"public/assets/images/icon-partly-cloudy.webp"}
+                        icon={daily.weathercode[i]}
                         maxTemp={`${Math.round(daily.temperature_2m_max[i])}°`}
                         minTemp={`${Math.round(daily.temperature_2m_min[i])}°`}
                     />

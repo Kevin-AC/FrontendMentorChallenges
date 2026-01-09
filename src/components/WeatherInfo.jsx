@@ -1,5 +1,6 @@
 import WeatherDetailCard from "./WeatherDetailCard";
 import { useWeatherContext } from "../context/WeatherContext";
+import { WeatherIcon } from "./WeatherIcon";
 
 export default function WeatherInfo(){
     const { ciudadInput, weather } = useWeatherContext();
@@ -37,12 +38,12 @@ export default function WeatherInfo(){
                     </p>
                 </div>
                 <div className="flex items-center">
-                    <img className="w-30" src="assets/images/icon-sunny.webp" alt="Temperature-Icon" />
-                    <p className="font-semibold italic text-7xl text-Neutral-0">{actual.temp}°</p>
+                    <WeatherIcon weathercode={actual.weathercode} size="w-30 h-30"/>
+                    <p className="font-semibold italic text-7xl text-Neutral-0">{Math.round(actual.temp)}°</p>
                 </div>
             </div>
             <div className="grid grid-cols-2 gap-4 md:flex md:gap-5 lg:gap-6">
-                <WeatherDetailCard value={`${actual.feelsLike} °`} text="Feels Like"/>
+                <WeatherDetailCard value={`${Math.round(actual.feelsLike)} °`} text="Feels Like"/>
                 <WeatherDetailCard value={`${actual.humidity} %`} text="Humidity" />
                 <WeatherDetailCard value={`${actual.wind} mph`} text="Wind" />
                 <WeatherDetailCard value={`${actual.precipitation} in`} text="Precipitation" />

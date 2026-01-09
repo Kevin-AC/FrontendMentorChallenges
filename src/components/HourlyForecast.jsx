@@ -30,8 +30,8 @@ export default function HourlyForecast(){
                 {hourly.time.map((hora,i)=>(
                     <HourlyCard 
                         key={hora}
-                        icon={"public/assets/images/icon-rain.webp"}
-                        temp={`${hourly.temperature_2m[i]}°`}
+                        icon={hourly.weathercode[i]}
+                        temp={`${Math.round(hourly.temperature_2m[i])}°`}
                         hour={hourly.time[i]}
                     />
                 ))}
