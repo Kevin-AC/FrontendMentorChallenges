@@ -3,10 +3,10 @@ const FORECAST_URL = "https://api.open-meteo.com/v1/forecast";
 
 const crearUrlClima = (lat, lon) =>
     `${FORECAST_URL}?latitude=${lat}&longitude=${lon}` +
-    `&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,precipitation` +
-    `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum` +
-    `&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation` +
-    `&timezone=auto`; // importante para que las fechas sean locales.[web:58]
+    `&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,precipitation,weathercode` +
+    `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode` +
+    `&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weathercode` +
+    `&timezone=auto`; // importante para que las fechas sean locales
 
 export async function getWeatherByCity(nombreCiudad) {
     // 1. Geocoding optener lat, lon
@@ -30,15 +30,6 @@ export async function getWeatherByCity(nombreCiudad) {
             hour12: true,
         });
     }
-    function formatearHora(isoString){
-        const fecha=new Date(isoString);
-        return fecha.toLocaleTimeString("en-US",{
-            hour:"numeric",
-            minute:"2-digit",
-            hour12:true,
-
-        })
-    }
     const horaActual = new Date();
     const indexHoraActual=dataClima.hourly.time.findIndex((t)=>{
         const d= new Date(t);
@@ -48,9 +39,10 @@ export async function getWeatherByCity(nombreCiudad) {
     const hourly={
         time:dataClima.hourly.time.slice(inicioHora,inicioHora+8).map(formatearHora),
         temperature_2m:dataClima.hourly.temperature_2m.slice(inicioHora,inicioHora+8),
+        weathercode:dataClima.hourly.weathercode.slice(inicioHora,inicioHora+8),
     }
 
-    // 3. Devolver ya organizado para tu UI
+    // 3. Devolver ya organizado
     return {
         ciudad: {
             nombre: c.name,
@@ -64,10 +56,11 @@ export async function getWeatherByCity(nombreCiudad) {
             humidity: dataClima.current.relative_humidity_2m,
             wind: dataClima.current.wind_speed_10m,
             precipitation: dataClima.current.precipitation,
+            weathercode:dataClima.current.weathercode,
             time: dataClima.current.time,
         },
-        daily: dataClima.daily, // daily forecast (fechas + max/min + precipitación).[web:58]
-        hourly, // hourly forecast.[web:58]
+        daily: dataClima.daily, // daily forecast (fechas + max/min + precipitación)
+        hourly, // hourly forecast
     };
 }
 // async function main() {

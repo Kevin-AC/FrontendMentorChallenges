@@ -19,6 +19,7 @@ export function WeatherProvider({children}){
                 const data = await getWeatherByCity(ciudadInput);
                 console.log("✅ DATA RECIBIDA:");
                 setWeather(data);
+                console.log(data)
             }catch(e){
                 console.error(e);
             }
