@@ -29,7 +29,7 @@ export default function WeatherInfo(){
     }
     return(
         <section className="w-full h-auto mt-8 flex flex-col gap-4 lg:gap-8 items-center bg-Neutral-900">
-            <div className="w-full h-71.5 py-20 px-5 flex flex-col md:flex-row md:items-center justify-center rounded-3xl bg-no-repeat bg-center bg-cover  sm:bg-[url(assets/images/bg-today-small.svg)] bg-[url(assets/images/bg-today-large.svg)] ">
+            <div className="w-full h-71.5 py-20 px-5 flex flex-col md:flex-row md:items-center justify-center rounded-3xl bg-no-repeat bg-center bg-cover  sm:bg-[url(/assets/images/bg-today-small.svg)] bg-[url(/assets/images/bg-today-large.svg)] ">
                 <div className="text-Neutral-0 text-center md:text-left md:w-96 md:flex flex-col">
                     <p className="font-bold text-3xl">{ciudad.nombre},{ciudad.pais}</p>
                     <p className="font-medium text-[18px] opacity-80">
