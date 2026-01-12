@@ -5,7 +5,8 @@ const WeatherContext = createContext(null)
 
 export function WeatherProvider({children}){
     const [ciudadInput, setCiudadInput] = useState("");
-    const [weather,setWeather]= useState("")
+    const [weather,setWeather]= useState("");
+    const [isImperial,setIsImperial] = useState(false)//cambio de unidad de medida
 
     useEffect(()=>{
        
@@ -19,7 +20,7 @@ export function WeatherProvider({children}){
                 const data = await getWeatherByCity(ciudadInput);
                 console.log("✅ DATA RECIBIDA:");
                 setWeather(data);
-                console.log(data)
+                
             }catch(e){
                 console.error(e);
             }
@@ -27,7 +28,7 @@ export function WeatherProvider({children}){
         load();
     },[ciudadInput]);
 
-    const value = {ciudadInput,setCiudadInput,weather};
+    const value = {ciudadInput,setCiudadInput,weather,isImperial,setIsImperial};
     return(
         <WeatherContext.Provider value={value}>{children}</WeatherContext.Provider>
     )

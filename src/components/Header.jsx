@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Button from "./Button";
 import SwitchPanel from "./SwitchPanel"
+import { useWeatherContext } from "../context/WeatherContext";
 
 export default function Header(){
-    const [isSwitchPanelOpen, setIsSwitchPanelOpen]=useState(false)
-    const [isImperial, setIsImperial] = useState(false)
+    const {isImperial, setIsImperial} = useWeatherContext();
+    const [isSwitchPanelOpen, setIsSwitchPanelOpen]=useState(false);
+   
     return(
         <section className="w-full h-9 flex justify-between items-center ">
             <img className="h-9" src="/assets/images/logo.svg" alt="WeatherLogo" />
