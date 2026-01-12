@@ -22,6 +22,7 @@ export async function getWeatherByCity(nombreCiudad) {
     const respClima = await fetch(urlClima);
     if (!respClima.ok) throw new Error(`Error HTTP: ${respClima.status}`);
     const dataClima = await respClima.json();
+
     function formatearHora(isoString) {
         const fecha = new Date(isoString);
         return fecha.toLocaleTimeString("en-US", {
@@ -30,16 +31,17 @@ export async function getWeatherByCity(nombreCiudad) {
             hour12: true,
         });
     }
-    const horaActual = new Date();
-    const indexHoraActual=dataClima.hourly.time.findIndex((t)=>{
-        const d= new Date(t);
-        return d.getHours()=== horaActual.getHours();
-    });
-    const inicioHora = indexHoraActual >=0 ? indexHoraActual:0;
+    // const horaActual = new Date();
+    // const indexHoraActual=dataClima.hourly.time.findIndex((t)=>{
+    //     const d= new Date(t);
+    //     return d.getHours()=== horaActual.getHours();
+    // });
+    // const inicioHora = indexHoraActual >=0 ? indexHoraActual:0;
     const hourly={
-        time:dataClima.hourly.time.slice(inicioHora,inicioHora+8).map(formatearHora),
-        temperature_2m:dataClima.hourly.temperature_2m.slice(inicioHora,inicioHora+8),
-        weathercode:dataClima.hourly.weathercode.slice(inicioHora,inicioHora+8),
+        time:dataClima.hourly.time,//.slice(inicioHora,inicioHora+8).map(formatearHora),
+        timeFormatted: dataClima.hourly.time.map(formatearHora),
+        temperature_2m:dataClima.hourly.temperature_2m,//.slice(inicioHora,inicioHora+8),
+        weathercode:dataClima.hourly.weathercode,//.slice(inicioHora,inicioHora+8),
     }
 
     // 3. Devolver ya organizado
@@ -63,16 +65,4 @@ export async function getWeatherByCity(nombreCiudad) {
         hourly, // hourly forecast
     };
 }
-// async function main() {
-//     try {
-//         const res = await getWeatherByCity("apartado");
-//         console.log("Ciudad:", res.ciudad);
-//         console.log("Actual:", res.actual);
-//         console.log("Daily:", res.daily);
-//         console.log("Hourly:", res.hourly);
-//     } catch (e) {
-//         console.error(e);
-//     }
-// }
 
-// main();
