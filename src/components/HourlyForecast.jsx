@@ -5,7 +5,7 @@ import HourlyCard from "./HourlyCard";
 import { useState } from "react";
 
 export default function HourlyForecast(){
-    const [isSwitchPanelOpen, setIsSwitchPanelOpen]=useState(true)
+    const [isSwitchPanelOpen, setIsSwitchPanelOpen]=useState(false)
     const {weather,selectedDay} = useWeatherContext();
     if (!weather)return;
     const { hourly,daily,actual }=weather
