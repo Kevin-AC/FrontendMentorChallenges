@@ -4,10 +4,11 @@ import { getWeatherByCity } from "../api/getWeatherByCity";
 const WeatherContext = createContext(null)
 
 export function WeatherProvider({children}){
-    const [ciudadInput, setCiudadInput] = useState("");
-    const [weather,setWeather]= useState("");
+    const [ciudadInput, setCiudadInput] = useState("kioto");
+    const [weather,setWeather]= useState(null);
     const [isImperial,setIsImperial] = useState(false)//cambio de unidad de medida
     const [selectedDay,setSelectedDay]=useState(0);
+    const [isLoading, setIsLoading] = useState(true); //  Estado de carga
 
     useEffect(()=>{
        
@@ -16,7 +17,7 @@ export function WeatherProvider({children}){
             return;
         } 
         async function load() {
-            
+            setIsLoading(true)
             try{
                 const data = await getWeatherByCity(ciudadInput);
                 console.log("✅ DATA RECIBIDA:");
@@ -24,12 +25,14 @@ export function WeatherProvider({children}){
                 
             }catch(e){
                 console.error(e);
+            }finally{
+                setIsLoading(false)
             }
         }
         load();
     },[ciudadInput]);
 
-    const value = {ciudadInput,setCiudadInput,weather,isImperial,setIsImperial,selectedDay,setSelectedDay};
+    const value = {ciudadInput,setCiudadInput,weather,isImperial,setIsImperial,selectedDay,setSelectedDay,isLoading};
     return(
         <WeatherContext.Provider value={value}>{children}</WeatherContext.Provider>
     )

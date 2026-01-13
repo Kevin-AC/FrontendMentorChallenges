@@ -4,26 +4,23 @@ import { WeatherIcon } from "./WeatherIcon";
 import { celsiusToFahrenheit,kmhToMph, mmToInch} from "../utils/changeUnits";
 import { act } from "react";
 export default function WeatherInfo(){
-    const { ciudadInput, weather, isImperial } = useWeatherContext();
-    if (!ciudadInput) {
+    const { ciudadInput, weather, isImperial, isLoading } = useWeatherContext();
+    if (isLoading) {
         return (
             <section className="w-full h-auto mt-8 flex justify-center items-center">
                 <p className="text-Neutral-0">Cargando clima...</p>
             </section>
         );
     }
-    if (!weather || typeof weather !== "object") {
+    if (!weather) {
         return (
             <section className="w-full h-auto mt-8 flex justify-center items-center">
-                <p className="text-Neutral-0">
-                    Cargando clima para <strong>{ciudadInput}</strong>...
-                </p>
+                <p className="text-Neutral-0">No se pudo cargar el clima</p>
             </section>
         );
     }
 
     const {ciudad,actual}=weather;
-    //const temp = isImperial ? Math.round(celsiusToFahrenheit(weather.temp)) : Math.round(weather.temp);
     function formatTemperature(temp){
         return isImperial ? Math.round(celsiusToFahrenheit(temp)) : Math.round(temp);
     }
