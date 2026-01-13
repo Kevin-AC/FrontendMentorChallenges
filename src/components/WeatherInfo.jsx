@@ -2,16 +2,10 @@ import WeatherDetailCard from "./WeatherDetailCard";
 import { useWeatherContext } from "../context/WeatherContext";
 import { WeatherIcon } from "./WeatherIcon";
 import { celsiusToFahrenheit,kmhToMph, mmToInch} from "../utils/changeUnits";
-import { act } from "react";
+
 export default function WeatherInfo(){
     const { ciudadInput, weather, isImperial, isLoading } = useWeatherContext();
-    if (isLoading) {
-        return (
-            <section className="w-full h-auto mt-8 flex justify-center items-center">
-                <p className="text-Neutral-0">Cargando clima...</p>
-            </section>
-        );
-    }
+    
     if (!weather) {
         return (
             <section className="w-full h-auto mt-8 flex justify-center items-center">
