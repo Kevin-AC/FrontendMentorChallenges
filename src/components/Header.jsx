@@ -13,7 +13,7 @@ export default function Header(){
             <Button
                 iconSrc="assets/images/icon-units.svg"
                 text="Units"
-                Style={"bg-Neutral-800 w-23 md:w-30 h-8.5 md:h-11"}
+                Style={"bg-Neutral-800 w-23 md:w-30 h-8.5 md:h-11 focus:ring-2 focus:ring-Neutral-0  focus:ring-offset-3 focus:ring-offset-Neutral-900"}
                 onClick={() => setIsSwitchPanelOpen(!isSwitchPanelOpen)}
             />
             <SwitchPanel 

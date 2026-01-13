@@ -14,14 +14,14 @@ export default function Search(){
             <img src="/assets/images/icon-search.svg" alt="iconSearch" className="top-4.5  left-3 absolute ml-1.5 " />
             <input
                 type="text"
-                className="py-4 px-12.5 w-full  h-14 bg-Neutral-800 opacity-100 rounded-xl text-Neutral-200"
+                className="py-4 px-12.5 w-full  h-14 bg-Neutral-800 opacity-100 rounded-xl text-Neutral-200 cursor-pointer focus:ring-1 focus:ring-Neutral-0  focus:ring-offset-3 focus:ring-offset-Neutral-900 "
                 placeholder="Search for a place..."
                 value={buscarCiudad}
                 onChange={(e)=>setBuscarCiudad(e.target.value)}
                 
             />
             
-            <button className="w-full md:w-28 h-14 bg-Blue-500 rounded-xl text-Neutral-0  hover:cursor-pointer "
+            <button className="w-full md:w-28 h-14 bg-Blue-500 rounded-xl text-Neutral-0  hover:cursor-pointer focus:ring-2 focus:ring-Blue-500 focus:ring-offset-2 focus:ring-offset-Neutral-900  "
                     onClick={handleSubmit}>
                 Search
             </button>

@@ -2,9 +2,9 @@ import UnitsDropdown from "./UnitsDropdown";
 export default function SwitchPanel({isOpen,onClose,isImperial,onSwitchUnits}){
     if(!isOpen) return null
     return(
-        <section className="z-10  absolute right-3.5 top-15 w-53 h-auto px-2 py-1.5 flex flex-col gap-2 text-Neutral-0 bg-Neutral-800 rounded-xl border border-Neutral-600">
+        <section className="z-10  absolute right-3.5 top-15 md:top-18 w-53 h-auto px-2 py-1.5 flex flex-col gap-2 text-Neutral-0 bg-Neutral-800 rounded-xl border border-Neutral-600">
             <button 
-                className="w-49 h-10 text-left px-2 border border-Neutral-600 rounded-sm"
+                className="w-49 h-10 text-left px-2 border border-Neutral-600 rounded-sm cursor-pointer focus:ring-1 focus:ring-Neutral-0  focus:ring-offset-2 focus:ring-offset-Neutral-900"
                 onClick={()=>{onSwitchUnits(),onClose()}}>Switch to {isImperial ? "Metric" : "Imperial"}
             </button>
             <div className="divide-y divide-Neutral-600 space-y-2">
