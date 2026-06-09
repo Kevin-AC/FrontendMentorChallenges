@@ -1,0 +1,215 @@
+:root{
+    --Cyan-600:#4D96A9;
+    --Cyan-300:#8FE3F9;
+    --Purple-600:#855FB1;
+    --Purple-300:#D9B8FF;
+    --Slate-900:#28283D;
+    --Slate-600:#87879D;
+    --Slate-300:#D1D1DF;
+    --White:#FAFAFA;
+
+
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+}
+body{
+    overflow-x: hidden;
+}
+.Header-container{
+    display: grid;
+    place-content: center;
+    padding-top: 48px;
+}
+
+.Hero-Section{
+    padding:64px 32px 32px 32px;
+    text-align: center;
+}
+.Hero-Section > * + *{
+    margin-top: 24px;
+}
+.Hero-Section_image-container{
+    display: flex;
+    justify-content:center;
+}
+.Hero-Section_image-container img{
+    width: 280px;
+}
+.Hero-Section h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--Slate-900);   
+}
+.Hero-Section p{
+    color: var(--Slate-600);
+    font-size: 1rem;
+    padding: 0px 52px;
+}
+.Hero-Section_button_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+.main-conten{
+    padding: 32px; 
+    display: flex;
+    gap: 63px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.step-counter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid var(--Slate-600);
+    color: var(--Slate-900);
+    font-weight: 900;
+    font-size: 1rem;
+    margin-top: 64px;
+}
+.step-counter::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50);
+    bottom: 100%;
+    width: 1px;
+    height: 80px;
+    background-color: var(--Slate-600);
+}
+.main-conten_info h3{
+    color: var(--Cyan-600);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 110%;
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+.main-conten_info h2{
+    color: var(--Slate-900);
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 110%;
+    margin-bottom: 32px;
+}
+.main-conten_info p{
+    color: var(--Slate-600);
+    font-size: 18px;
+    line-height: 150%;
+
+
+}
+.main-conten_image-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+}
+.main-conten_image-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 64px;
+}
+.footer-container{
+    width: 100%;
+    background-image: 
+        linear-gradient(rgba(143, 227, 249, 0.85), rgba(143, 227, 249, 0.85)),
+        url(./assets/mobile/image-footer.jpg);
+    background-position: left top; 
+    background-size: cover;
+    padding: 94px 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative; 
+    margin-top: 124px;
+    
+}
+.footer-container .step-counter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0px;
+    background-color: var(--White);
+}
+
+.footer-container_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+}
+.footer-container_info h2{
+    color: var(--White);
+    font-weight: 900;
+    font-size: 32px;
+}
+.footer-container_info p{
+    font-size: 18px;
+    color: var(--White);
+
+}
+
+.Main-Button{
+    background-color: var(--Cyan-600);
+    width: 193px;
+    height: 56px;
+    border-radius: 29px;
+    font-weight:900;
+    color: var(--White);
+    font-size: 1rem;
+    line-height: 150%;
+    border: none;
+    cursor: pointer;
+}
+.Main-Button span{
+    color:var(--Cyan-300);
+    font-weight: 900;
+    margin-left: 4px;
+    
+}
+.Main-Button--purple{
+    background-color: var(--Purple-600);
+}
+.Main-Button--purple span{
+    color:var(--Purple-300);
+    font-weight: 900;
+    margin-left: 4px;
+    
+}
+.Second-Button{
+    background-color: var(--Purple-600);
+    height: 56px;
+    width: 161px;
+    border-radius: 29px;
+    border:none;
+    font-weight: 900;
+    color: white;
+    font-size: 1rem;
+}
