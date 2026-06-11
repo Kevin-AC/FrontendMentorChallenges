@@ -178,7 +178,7 @@ body{
 }
 
 .footer-container{
-    border: 1px solid red;
+   
     width: 100%;
     background-image: 
         linear-gradient(rgba(143, 227, 249, 0.85), rgba(143, 227, 249, 0.85)),
@@ -203,7 +203,7 @@ body{
 }
 
 .footer-container_info{
-    border:1px solid red;
+   
     text-align: center;
     width: 311px;
     display: flex;
@@ -325,4 +325,27 @@ body{
         height: auto;
     }
     
+    .footer-container{
+        background-image: 
+            linear-gradient(rgba(143, 227, 249, 0.85), rgba(143, 227, 249, 0.85)),
+            url(./assets/desktop/image-footer.jpg);
+        background-position: center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 112px 80px;
+       
+    }
+    .footer-container_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:start;
+        text-align: left;
+        width: 1120px;
+        height: 88px;
+        
+    }
+    .footer-container_info p,.footer-container_info h2{
+        width: 305px;
+    }
 }
