@@ -239,20 +239,32 @@ body{
     border: none;
     cursor: pointer;
 }
+.Main-Button:hover{
+    background-color: var(--Cyan-300);
+    
+}
 .Main-Button span{
     color:var(--Cyan-300);
     font-weight: 900;
     margin-left: 4px;
     
 }
+.Main-Button:hover span{
+    color: var(--Cyan-600);
+}
 .Main-Button--purple{
     background-color: var(--Purple-600);
+}
+.Main-Button--purple:hover{
+    background-color: var(--Purple-300);
 }
 .Main-Button--purple span{
     color:var(--Purple-300);
     font-weight: 900;
     margin-left: 4px;
-    
+}
+.Main-Button--purple:hover span{
+    color: var(--Purple-600);
 }
 .Second-Button{
     background-color: var(--Purple-600);
@@ -263,6 +275,9 @@ body{
     font-weight: 900;
     color: white;
     font-size: 1rem;
+}
+.Second-Button:hover{
+     background-color: var(--Purple-300);
 }
 
 @media (min-width:768px) {
@@ -330,6 +345,12 @@ body{
         justify-content: space-between;
         z-index: 10;
         position: relative;
+    }
+    .Hero-Section_main-text h1{
+        font-size:64px;
+    }
+    .Hero-Section_main-text p{
+        font-size: 18px;
     }
  
     .Hero-Section_main-text{
