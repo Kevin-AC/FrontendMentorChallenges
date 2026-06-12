@@ -23,6 +23,7 @@
 }
 body{
     overflow-x: hidden;
+    background-color: var(--Slate-300);
 }
 .Header-container{
     display: grid;
@@ -182,7 +183,10 @@ body{
    
     width: 100%;
     background-image: 
-        linear-gradient(rgba(143, 227, 249, 0.85), rgba(143, 227, 249, 0.85)),
+        linear-gradient(
+            color-mix(in srgb, var(--Cyan-600) 85%, transparent), 
+            color-mix(in srgb, var(--Cyan-600) 85%, transparent)
+        ),
         url(./assets/mobile/image-footer.jpg);
     background-position: left top; 
     background-size: cover;
@@ -299,7 +303,10 @@ body{
 
     .footer-container{
         background-image: 
-            linear-gradient(rgba(143, 227, 249, 0.85), rgba(143, 227, 249, 0.85)),
+            linear-gradient(
+            color-mix(in srgb, var(--Cyan-600) 85%, transparent), 
+            color-mix(in srgb, var(--Cyan-600) 85%, transparent)
+        ),
             url(./assets/tablet/image-footer.jpg);
         background-position: center; 
         background-size: contain;
@@ -365,7 +372,10 @@ body{
     }
     .footer-container{
         background-image: 
-            linear-gradient(rgba(143, 227, 249, 0.85), rgba(143, 227, 249, 0.85)),
+           linear-gradient(
+            color-mix(in srgb, var(--Cyan-600) 85%, transparent), 
+            color-mix(in srgb, var(--Cyan-600) 85%, transparent)
+            ),
             url(./assets/desktop/image-footer.jpg);
         background-position: center; 
         background-size: cover;
